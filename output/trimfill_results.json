@@ -1,0 +1,38 @@
+{
+  "strict_hand_on_hip": {
+    "side": "right",
+    "k_missing": 2,
+    "beta_original": 1.1279,
+    "ci_original": [
+      0.6561,
+      1.5997
+    ],
+    "I2_original": 76.2317,
+    "beta_trimfill": 1.2835,
+    "ci_trimfill": [
+      0.8101,
+      1.7568
+    ],
+    "I2_trimfill": 79.3998,
+    "delta_g": 0.15560000000000018,
+    "pct_change": 13.795549250820125
+  },
+  "wide_all_cmj": {
+    "side": "right",
+    "k_missing": 3,
+    "beta_original": 1.0019,
+    "ci_original": [
+      0.7223,
+      1.2815
+    ],
+    "I2_original": 66.8574,
+    "beta_trimfill": 1.1242,
+    "ci_trimfill": [
+      0.8355,
+      1.413
+    ],
+    "I2_trimfill": 72.5472,
+    "delta_g": 0.12230000000000008,
+    "pct_change": 12.206807066573518
+  }
+}

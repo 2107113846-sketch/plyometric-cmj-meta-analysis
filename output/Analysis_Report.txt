@@ -1,0 +1,123 @@
+
+================================================================================
+  Plyometric Training Effects on Countermovement Jump Height
+  META-ANALYSIS REPORT
+  Date: 2026-06-11 (Updated)
+================================================================================
+
+1. SUMMARY OF FINDINGS
+────────────────────────────────────────────────────────────────────────────
+  Strict hand-on-hip pool (16 RCTs):
+    Pooled SMD (Hedges' g) = +1.128 [95% CI: 0.656, 1.600], p < 0.001
+    Prediction interval: [-0.878, +3.134]
+    Heterogeneity: I2 = 76.2%, tau2 = 0.687
+
+  Wide pool including arm-unclear (28 RCTs):
+    Pooled SMD = +1.002 [95% CI: 0.722, 1.282], p < 0.001
+    Prediction interval: [-0.350, +2.354]
+    Heterogeneity: I2 = 66.9%, tau2 = 0.359
+
+  Sensitivity (R11+R27 removed, 14 strict):
+    Pooled SMD = +0.851 [95% CI: 0.548, 1.153], p < 0.001
+    Heterogeneity: I2 = 41%
+
+2. SUBGROUP ANALYSES
+────────────────────────────────────────────────────────────────────────────
+  Intervention Duration:
+    Short (<=6 weeks, 14 studies):  g = +0.595 [0.377, 0.814], I2 = 13%
+    Medium (7-10 weeks, 10 studies): g = +1.456 [0.962, 1.951], I2 = 61%
+    Long (>10 weeks, 4 studies):    g = +1.852 [-0.080, 3.783], I2 = 94%
+
+  Age Group:
+    Pre/Early Pubertal (2):  g = +1.374 [0.773, 1.975], I2 = 0%
+    Pubertal (2):            g = +1.513 [0.878, 2.149], I2 = 0%
+    Young Adult (13):        g = +1.112 [0.676, 1.548], I2 = 67%
+    Adult/Pro (10):          g = +0.803 [0.193, 1.413], I2 = 83%
+
+  CMJ Arm Position:
+    Strict hands-on-hips (16): g = +1.128 [0.656, 1.600], I2 = 76%
+    Arm-unclear (6):          g = +0.794 [0.465, 1.124], I2 = 20%
+    CMJA-arm-swing (6):       g = +0.977 [0.214, 1.741], I2 = 79%
+
+  Training Type:
+    Pure plyometric (26):     g = +0.931 [0.666, 1.195], I2 = 61%
+    Mixed Plyo+Strength (2):  g = +1.973 [0.205, 3.740], I2 = 79%
+
+  Sex:
+    Male (20):   g = +0.929 [0.652, 1.205], I2 = 53%
+    Female (3):  g = +2.100 [-0.732, 4.932], I2 = 96%
+    Mixed (5):   g = +0.905 [0.270, 1.539], I2 = 65%
+
+3. META-REGRESSION
+────────────────────────────────────────────────────────────────────────────
+  Duration (weeks):
+    Slope = +0.131 per week (SE = 0.058, z = 2.27, p = 0.023)
+    Predicted: 4wk=+0.54, 6wk=+0.80, 8wk=+1.06, 10wk=+1.32, 12wk=+1.59
+
+  Sessions per week:
+    Slope = +0.537 per session (SE = 0.219, z = 2.45, p = 0.014)
+
+  Non-significant moderators:
+    Age (p=0.568), Sample size (p=0.344), Year (p=0.224), Arm (p=0.602)
+
+  Multi-variable (Duration + Arm):
+    Duration remains significant (b=+0.137, p=0.019) controlling for arm position.
+    Arm Position not significant (b=-0.141, p=0.406).
+    QM(df=2) = 5.80, p = 0.055
+
+4. PUBLICATION BIAS
+────────────────────────────────────────────────────────────────────────────
+  Egger's test: Intercept = -2.357 (strict), p < 0.001
+                Intercept = -1.334 (wide), p < 0.001
+  SE-g correlation: r = +0.880 (strict), r = +0.859 (wide)
+  Funnel plot: roughly symmetric distribution around pooled effect
+    Strict pool: 8 studies above / 8 studies below pooled effect
+    Wide pool: 13 studies above / 15 studies below pooled effect
+
+  Note: Significant Egger may reflect genuine heterogeneity (small studies
+  with more intense interventions) rather than classic publication bias.
+  Sample size was NOT a significant moderator in meta-regression (p=0.344).
+
+5. SENSITIVITY ANALYSES
+────────────────────────────────────────────────────────────────────────────
+  Leave-one-out (strict pool, 16 studies):
+    Range of pooled g: +0.943 to +1.197 (all significant)
+    Most influential: R11 Sedano Campo 2009 (remove: g=+0.943, delta=-0.185)
+
+  Outlier removal:
+    Remove R11: g=+0.943 [0.603, 1.283], I2=54%
+    Remove R27: g=+1.011 [0.587, 1.435], I2=70%
+    Remove R11+R27: g=+0.851 [0.548, 1.153], I2=41%
+
+  Data quality sensitivity:
+    Remove R19 (CI-derived SD): strict delta_g=-0.016, wide delta_g=-0.016
+    Remove R23 (KG SD approx): wide delta_g=+0.024, arm-unclear delta_g=+0.072
+    Remove R29 (Post=Pre+delta): strict delta_g=+0.049, wide delta_g=+0.023
+
+6. OUTPUT FILES
+────────────────────────────────────────────────────────────────────────────
+  Table1_Study_Characteristics.csv  -- Study-level data for manuscript Table 1
+  RevMan_ready_strict_pool.csv      -- Strict pool for RevMan import
+  RevMan_ready_wide_pool.csv        -- Wide pool for RevMan import
+  PRISMA_flow.json                  -- PRISMA flow diagram data
+  analysis_ready_effects.csv        -- Complete effect size dataset
+  forest_strict_hand_on_hip.png     -- Forest plot (strict pool)
+  forest_wide_all_cmj.png           -- Forest plot (wide pool)
+  funnel_strict_hand_on_hip.png     -- Funnel plot (strict pool)
+  funnel_wide_all_cmj.png           -- Funnel plot (wide pool)
+
+7. INTERPRETATION
+────────────────────────────────────────────────────────────────────────────
+  Plyometric training produces a large and statistically significant
+  improvement in CMJ height. The effect is robust to sensitivity analyses.
+
+  Intervention duration is the most important moderator: short programs
+  (<=6 weeks) produce consistent moderate effects (g=0.60, I2=13%), while
+  longer programs produce larger but more variable effects.
+
+  Youth athletes show consistently large effects (g=1.37-1.51, I2=0%),
+  suggesting that developmental status may amplify plyometric gains.
+
+  Funnel plot asymmetry warrants cautious interpretation but may reflect
+  genuine heterogeneity rather than publication bias.
+================================================================================

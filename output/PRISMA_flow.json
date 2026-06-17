@@ -1,0 +1,29 @@
+{
+  "Identification": {
+    "Records_identified": 135,
+    "Source": "PubMed/Scopus/WoS + reference lists"
+  },
+  "Screening": {
+    "Records_screened": 135,
+    "Records_excluded_title_abstract": 44,
+    "Full_text_assessed": 91
+  },
+  "Eligibility": {
+    "Full_text_excluded": 60,
+    "Reasons": {
+      "No_CMJ_height_reported": 25,
+      "No_independent_control_group": 15,
+      "Not_RCT": 8,
+      "CMJ_with_arm_swing_not_reported_separately": 5,
+      "Duplicate_or_overlapping_sample": 3,
+      "Other": 4
+    }
+  },
+  "Included": {
+    "Studies_in_meta_analysis": 29,
+    "Strict_hand_on_hip": 16,
+    "Arm_unclear": 6,
+    "CMJA_with_arm": 6,
+    "VJ_sensitivity_subgroup": 1
+  }
+}
