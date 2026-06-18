@@ -64,6 +64,19 @@ if (res$k > 2) {
   }
 }
 
+# I² and tau² confidence intervals via profile likelihood (Q-profile method)
+if (res$k >= 3) {
+  ci_res <- tryCatch(confint(res), error = function(e) NULL)
+  if (!is.null(ci_res)) {
+    # tau2 CI
+    out$tau2_ci_low <- as.numeric(ci_res$random[1, 2])
+    out$tau2_ci_upp <- as.numeric(ci_res$random[1, 3])
+    # I2 CI
+    out$I2_ci_low <- as.numeric(ci_res$random[3, 2])
+    out$I2_ci_upp <- as.numeric(ci_res$random[3, 3])
+  }
+}
+
 # Egger test
 if (res$k >= 3) {
   egger <- tryCatch(regtest(res), error = function(e) NULL)
