@@ -1,18 +1,18 @@
 {
   "strict": {
     "label": "Strict hand-on-hip",
-    "k": 15,
-    "g": 1.1801,
-    "ci_low": 0.6756,
-    "ci_upp": 1.6846,
-    "I2": 78.0547,
-    "I2_ci_low": 63.2601,
-    "I2_ci_upp": 94.5195,
-    "tau2": 0.7535,
-    "tau2_ci_low": 0.3648,
-    "tau2_ci_upp": 3.6538,
-    "pred_low": -0.5945,
-    "pred_upp": 2.9547
+    "k": 16,
+    "g": 1.1279,
+    "ci_low": 0.6561,
+    "ci_upp": 1.5997,
+    "I2": 76.2317,
+    "I2_ci_low": 61.6922,
+    "I2_ci_upp": 93.9699,
+    "tau2": 0.6869,
+    "tau2_ci_low": 0.3449,
+    "tau2_ci_upp": 3.3373,
+    "pred_low": -0.5636,
+    "pred_upp": 2.8194
   },
   "wide": {
     "label": "Wide all CMJ",
@@ -28,35 +28,5 @@
     "tau2_ci_upp": 1.7407,
     "pred_low": -0.2049,
     "pred_upp": 2.2086
-  },
-  "short": {
-    "label": "Short-term <=6wk",
-    "k": 13,
-    "g": 0.7498,
-    "ci_low": 0.5168,
-    "ci_upp": 0.9828,
-    "I2": 19.6169,
-    "I2_ci_low": 0,
-    "I2_ci_upp": 72.4807,
-    "tau2": 0.0349,
-    "tau2_ci_low": 0,
-    "tau2_ci_upp": 0.3771,
-    "pred_low": 0.3156,
-    "pred_upp": 1.184
-  },
-  "mid": {
-    "label": "Mid-term 7-10wk",
-    "k": 13,
-    "g": 0.951,
-    "ci_low": 0.5625,
-    "ci_upp": 1.3396,
-    "I2": 57.1009,
-    "I2_ci_low": 23.5986,
-    "I2_ci_upp": 89.827,
-    "tau2": 0.2856,
-    "tau2_ci_low": 0.0663,
-    "tau2_ci_upp": 1.8949,
-    "pred_low": -0.1662,
-    "pred_upp": 2.0683
   }
 }

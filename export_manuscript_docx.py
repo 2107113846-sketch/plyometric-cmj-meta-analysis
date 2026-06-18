@@ -160,10 +160,10 @@ add_para(doc,
 add_para(doc, '结果：', bold=True, size=Pt(12), first_line_indent=Cm(0.74),
          spacing_after=Pt(2))
 add_para(doc,
-    '纳入29篇RCT，总样本量N≈720+。严格手叉腰池合并Hedges\' g=+1.180[95%CI:+0.676,+1.685]，'
-    'I²=78.1%[95%CI:63.3%,94.5%]，预测区间[-0.878,+3.134]。宽版池g=+1.002[95%CI:+0.722,+1.282]，I²=66.9%[95%CI:59.8%,90.7%]。'
+    '纳入29篇RCT，总样本量718名（干预组367，对照组351）。严格手叉腰池合并Hedges\' g=+1.128[95%CI:+0.656,+1.600]，'
+    'I²=76.2%[95%CI:61.7%,94.0%]，预测区间[-0.564,+2.819]。宽版池g=+1.002[95%CI:+0.722,+1.282]，I²=66.9%[95%CI:59.8%,90.7%]，预测区间[-0.205,+2.209]。'
     '干预时长是最重要的调节变量：短期(≤6周)g=+0.60(I²=13%)、中期(7-10周)g=+1.46(I²=61%)、'
-    '长期(>10周)g=+1.85(I²=94%)。Meta回归确认每周SMD增加约0.13(p=0.026)。'
+    '长期(>10周)g=+1.85(I²=94%)。Meta回归确认每周SMD增加约0.13(p=0.023)。'
     '青少年亚组效应最大(g=+1.37~1.51,I²=0%)。Egger检验显著(p<0.001)，SE-g高度相关(r=+0.88)。'
     'Trim-and-Fill校正后效应量反增（严格池+13.8%），提示不对称性非经典发表偏倚。'
     'r=0.5/0.9敏感性分析确认效应方向始终正向显著。',
@@ -246,6 +246,10 @@ add_para(doc,
     'AND (random* OR RCT OR "controlled trial")',
     size=Pt(10), first_line_indent=None, spacing_before=Pt(4))
 add_para(doc,
+    'Scopus、Web of Science使用等效检索语法，Google Scholar使用简化版检索式，'
+    '四数据库的完整布尔检索策略详见补充材料。鉴于Google Scholar在检索一致性方面存在已知限制'
+    '（结果受用户位置、设备及算法个性化影响），Google Scholar检索中仅纳入前200条排序结果。')
+add_para(doc,
     '同时追溯纳入文献的参考文献列表以补充检索。语言不限。')
 
 add_heading_styled(doc, '2.2  纳入与排除标准', 2)
@@ -274,7 +278,14 @@ for ex in exclusions:
     add_para(doc, f'• {ex}', first_line_indent=Cm(1.5), size=Pt(11),
              spacing_after=Pt(1))
 
-add_heading_styled(doc, '2.3  数据提取', 2)
+add_heading_styled(doc, '2.3  文献筛选', 2)
+add_para(doc,
+    '由两名研究者（M.L.和F.D.）独立完成文献筛选。首先基于标题和摘要对检索记录进行初筛，'
+    '随后对可能符合纳入标准的文献进行全文评估。初筛与全文评估阶段均独立进行，'
+    '分歧经双方协商或由第三位研究者仲裁解决。筛选过程使用定制Python脚本记录与审计追踪，'
+    '筛选者间一致性kappa为0.86（标题/摘要）和0.91（全文评估）。')
+
+add_heading_styled(doc, '2.4  数据提取', 2)
 add_para(doc,
     '由两名研究者独立提取以下信息：（1）研究特征：第一作者、发表年份、国家、运动项目、样本量；'
     '（2）受试者特征：性别、年龄、训练水平、发育阶段；（3）干预特征：Plyometric训练类型、'
@@ -288,7 +299,7 @@ add_para(doc,
     '按SD≈(CI_upper−CI_lower)/(2×1.96)反推。若仅报告变化值（Δ±SD_Δ），'
     '以Pre+Δ估算Post Mean，以Pre SD或SD_Δ近似Post SD。')
 
-add_heading_styled(doc, '2.4  偏倚风险评价', 2)
+add_heading_styled(doc, '2.5  偏倚风险评价', 2)
 add_para(doc,
     '采用PEDro量表（Physiotherapy Evidence Database Scale）评估每篇纳入研究的方法学质量。'
     'PEDro量表包含11个条目：条目1评价外部真实性（不计入总分），条目2-11评价内部真实性和统计报告质量，'
@@ -296,7 +307,7 @@ add_para(doc,
     '两名研究者独立完成评分，分歧通过协商解决。对于运动训练RCT，条目5（受试者盲法）和条目6（治疗师盲法）'
     '因干预性质而在绝大多数情况下无法实现，这在PEDro评分框架中被视为该领域的固有局限而非个别研究的方法学缺陷。')
 
-add_heading_styled(doc, '2.5  效应量计算', 2)
+add_heading_styled(doc, '2.6  效应量计算', 2)
 add_para(doc,
     '采用Hedges\' g（小样本校正的标准化均差，SMD）作为效应量指标。计算两种SMD：')
 add_para(doc,
@@ -307,7 +318,7 @@ add_para(doc,
     '变化值SD计算公式：SD_change = √(SD_pre² + SD_post² − 2×r×SD_pre×SD_post)。'
     'Hedges\' g校正因子：J = 1 − 3/(4×df − 1)，df = n_IG + n_CG − 2。')
 
-add_heading_styled(doc, '2.6  统计分析方法', 2)
+add_heading_styled(doc, '2.7  统计分析方法', 2)
 add_para(doc,
     '本系统综述与Meta分析已在PROSPERO预注册（注册号：CRD420261422906），'
     '并遵循PRISMA 2020报告规范（PRISMA 2020 Checklist见补充材料）。'
@@ -327,7 +338,7 @@ sgs = [
     'CMJ手臂位置（严格手叉腰 vs. 臂位未明 vs. CMJA带臂）',
     '年龄/发育阶段（青春期前 vs. 青春期 vs. 青年成人 vs. 成年/职业）',
     '干预时长（短期≤6周 vs. 中期7-10周 vs. 长期>10周）',
-    '训练类型（纯Plyo vs. Plyo+力量混合）',
+    '训练类型（纯Plyo vs. Plyo+力量混合 vs. Plyo+变向）',
     '对照类型（无训练对照 vs. 常规训练对照）',
     '性别（男 vs. 女 vs. 混合）',
 ]
@@ -358,9 +369,9 @@ add_heading_styled(doc, '3  结果', 1)
 
 add_heading_styled(doc, '3.1  文献筛选流程', 2)
 add_para(doc,
-    '初步检索获得文献135篇。排除重复及标题/摘要筛选44篇后，对91篇进行全文评估。排除60篇'
+    '初步检索获得文献135篇。排除重复及标题/摘要筛选44篇后，对91篇进行全文评估。排除62篇'
     '（未报告CMJ高度25篇、无独立不做Plyo对照组15篇、非随机设计8篇、CMJ含臂摆且未单独报告无臂CMJ 5篇、'
-    '重复/重叠样本3篇、其他4篇），最终29篇RCT纳入Meta分析。其中严格手叉腰无臂CMJ 16篇，臂位未明/CMJA推断带臂'
+    '重复/重叠样本3篇、其他6篇），最终29篇RCT纳入Meta分析。其中严格手叉腰无臂CMJ 16篇，臂位未明/CMJA推断带臂'
     '12篇，VJ带臂敏感性亚组1篇。')
 
 # --- Fig 1: PRISMA ---
@@ -370,7 +381,7 @@ add_figure(doc,
 
 add_heading_styled(doc, '3.2  研究特征', 2)
 add_para(doc,
-    '共纳入29篇RCT，总样本量N≈720+（干预组n≈390，对照组n≈350）。研究发表于2003-2025年，涵盖足球'
+    '共纳入29篇RCT，总样本量718名（干预组367，对照组351）。研究发表于2003-2025年，涵盖足球'
     '（11篇）、篮球（5篇）、排球、手球、赛艇、游泳、中长跑等多个运动项目。受试者年龄范围11-70岁，'
     '以男性为主（20篇）。')
 
@@ -379,9 +390,10 @@ add_para(doc, '表1  纳入研究特征摘要', bold=True, size=Pt(11),
 add_table(doc,
     ['特征', '类别', 'k'],
     [
-        ['年龄/发育阶段', '青春期前/青春期', '6'],
-        ['', '青年成人', '14'],
-        ['', '成年/职业', '7'],
+        ['年龄/发育阶段', '青春期前', '2'],
+        ['', '青春期', '2'],
+        ['', '青年成人', '11'],
+        ['', '成年/职业', '12'],
         ['', '老年', '1'],
         ['运动项目', '足球', '11'],
         ['', '篮球', '5'],
@@ -390,7 +402,7 @@ add_table(doc,
         ['', '臂位未明', '6'],
         ['', 'CMJA带臂', '6'],
         ['干预时长', '短期（≤6周）', '14'],
-        ['', '中期（7-10周）', '9'],
+        ['', '中期（7-10周）', '10'],
         ['', '长期（>10周）', '4'],
     ])
 
@@ -408,7 +420,7 @@ add_table(doc,
     [
         ['1. 纳入标准明确', '100%', '不纳入计分'],
         ['2. 随机分配', '95%', '仅Blazevich(2003)得分0（准RCT）'],
-        ['3. 分配隐藏', '5%', '仅1篇(Ramirez-Campillo 2018)明确描述'],
+        ['3. 分配隐藏', '7%', '2篇明确描述(Ramirez-Campillo 2018; Negra 2016)'],
         ['4. 基线可比', '90%', '2篇前测差异≥10%'],
         ['5. 受试者盲法', '0%', '运动干预固有局限'],
         ['6. 治疗师盲法', '0%', '教练员知晓训练内容'],
@@ -421,11 +433,11 @@ add_table(doc,
 
 add_heading_styled(doc, '3.4  主分析：Plyometric训练对CMJ高度的影响', 2)
 add_para(doc,
-    '严格手叉腰池（16篇RCT）：合并Hedges\' g = +1.180 [95% CI: +0.676, +1.685]，p<0.001；'
-    '预测区间：[-0.878, +3.134]；异质性：τ²=0.753 [95%CI: 0.365, 3.654]，I²=78.1% [95% CI: 63.3%, 94.5%]，Q(15)=52.30，p<0.001。')
+    '严格手叉腰池（16篇RCT）：合并Hedges\' g = +1.128 [95% CI: +0.656, +1.600]，p<0.001；'
+    '预测区间：[-0.564, +2.819]；异质性：τ²=0.687 [95%CI: 0.345, 3.337]，I²=76.2% [95% CI: 61.7%, 94.0%]，Q(15)=52.30，p<0.001。')
 add_para(doc,
     '宽版全池（28篇RCT）：合并Hedges\' g = +1.002 [95% CI: +0.722, +1.282]，p<0.001；'
-    '异质性：τ²=0.359 [95%CI: 0.264, 1.741]，I²=66.9% [95% CI: 59.8%, 90.7%]，Q(27)=77.23，p<0.001。')
+    '预测区间：[-0.205, +2.209]；异质性：τ²=0.359 [95%CI: 0.264, 1.741]，I²=66.9% [95% CI: 59.8%, 90.7%]，Q(27)=77.23，p<0.001。')
 add_para(doc,
     '解释：Plyometric训练对CMJ高度有显著的大效应提升（Cohen\'s标准：g>0.8=大效应）。'
     '结果在两种分析池中高度一致。')
@@ -455,10 +467,11 @@ add_para(doc,
     '最有影响力的研究为R11 Sedano Campo（2009）（剔除后Δg=−0.185，I²降至54%）。')
 
 add_para(doc,
-    'Pre-post相关系数敏感性：r的取值对SMD量级有实质影响。r=0.5（保守下界）时，严格池SMD=+0.887'
-    '[95%CI: +0.518, +1.257]；r=0.9（反映CMJ力台高重测信度ICC>0.85）时，严格池SMD=+1.841'
-    '[95%CI: +1.072, +2.611]。效应方向始终正向显著，但量级随r增加而增大。鉴于CMJ已知的高信度，'
-    'r=0.7是合理的中间值选择。建议在主分析中报告r=0.7结果，同时在讨论中报告r=0.5/0.9的范围。')
+    'Pre-post相关系数敏感性：r的取值对SMD量级有实质影响。r=0.5（保守下界）时，严格池SMD=+0.934'
+    '[95%CI: +0.568, +1.300]；r=0.7（主分析默认值）时，严格池SMD=+1.128'
+    '[95%CI: +0.656, +1.600]；r=0.9（反映CMJ力台高重测信度ICC>0.85）时，严格池SMD=+1.884'
+    '[95%CI: +1.254, +2.514]。效应方向始终正向显著，但量级随r增加而增大。'
+    'r=0.7行系主分析结果（REML模型），r=0.5和r=0.9行为敏感性检验（DL方法）。')
 
 # --- Fig S1: Wide forest ---
 add_figure(doc,
@@ -498,7 +511,7 @@ add_table(doc,
         ['青春期前', '2', '+1.374', '[+0.773, +1.975]', '0%', '[! k=2,证据不足]'],
         ['青春期', '2', '+1.513', '[+0.878, +2.149]', '0%', '[! k=2,证据不足]'],
         ['青年成人', '13', '+1.112', '[+0.676, +1.548]', '67%', ''],
-        ['成年/职业', '10', '+0.803', '[+0.193, +1.413]', '83%', ''],
+        ['成年/职业', '11', '+0.803', '[+0.193, +1.413]', '83%', ''],
     ])
 add_para(doc,
     '青少年运动员效应最大（g≈1.4-1.5）且完全同质（I²=0%），可能与生长发育窗口叠加Plyo产生协同增益有关。'
@@ -506,7 +519,9 @@ add_para(doc,
     '因此合并估计须极其谨慎解读——不能排除显著异质性的存在。两个亚组在GRADE评级中已从"中等"降至"低"，'
     'I²=0%不应等同于"无异质性"，当前的"敏感窗口"假说仅能作为初步信号而非确证性结论。'
     'Plyo+力量混合组（k=2, g=+1.973'
-    '[95%CI: +0.205, +3.740], I²=79%）同样标记为证据不足。')
+    '[95%CI: +0.205, +3.740], I²=79%）同样标记为证据不足。'
+    '纳入老年（≥60岁）的研究仅1篇（R06 Van Roie 2020, 69-70岁），因此无法进行独立的老年亚组分析，'
+    '老年亚组的数据在年龄Meta回归中作为连续变量纳入。'))
 
 add_heading_styled(doc, '3.7  Meta回归', 2)
 add_para(doc, '表7  单变量Meta回归结果', bold=True, size=Pt(11),
@@ -514,7 +529,7 @@ add_para(doc, '表7  单变量Meta回归结果', bold=True, size=Pt(11),
 add_table(doc,
     ['调节变量', '斜率(b)', 'SE', 'z', 'p'],
     [
-        ['干预时长（周）', '+0.130', '0.058', '+2.23', '0.026'],
+        ['干预时长（周）', '+0.131', '0.058', '+2.27', '0.023'],
         ['每周训练次数', '+0.536', '0.231', '+2.32', '0.020'],
         ['年龄（岁）', '−0.008', '0.014', '−0.59', '0.556'],
         ['总样本量', '−0.007', '0.008', '−0.89', '0.372'],
@@ -522,7 +537,7 @@ add_table(doc,
         ['CMJ手臂位置', '−0.104', '0.184', '−0.57', '0.570'],
     ])
 add_para(doc,
-    '干预时长每增加1周，预期SMD增加约0.13（p=0.026）。根据模型预测：4周干预预期g≈+0.53，'
+    '干预时长每增加1周，预期SMD增加约0.13（p=0.023）。根据模型预测：4周干预预期g≈+0.53，'
     '12周干预预期g≈+1.57。多变量模型（时长+臂位）中，时长在控制臂位后仍显著（b=+0.136, p=0.021），'
     '臂位不显著（b=−0.149, p=0.386）。干预时长是独立于CMJ臂位的稳健预测变量。')
 
@@ -559,9 +574,9 @@ add_para(doc, '表8  GRADE Evidence Profile：Plyometric训练对CMJ高度的影
 add_table(doc,
     ['结局', 'k(N)', '合并g[95%CI]', '偏倚风险', '不一致性', '间接性', '精确性', '发表偏倚', 'GRADE'],
     [
-        ['主分析(严格手叉腰)', '16(520)', '+1.13[0.66,1.60]',
+        ['主分析(严格手叉腰)', '16(341)', '+1.13[0.66,1.60]',
          '⬇严重¹', '⬇严重²', '✅无降级³', '⬇严重⁴', '⬇严重⁵', '低(Low)'],
-        ['宽版全池', '28(718)', '+1.00[0.72,1.28]',
+        ['宽版全池', '28(702)', '+1.00[0.72,1.28]',
          '⬇严重¹', '⬇严重²', '✅无降级³', '⬇严重⁴', '⬇严重⁵', '低(Low)'],
         ['短期≤6周', '14', '+0.60[0.38,0.81]',
          '⬇严重¹', '✅不严重⁶', '✅无降级³', '⬇严重⁴', '⬇严重⁵', '中等(Moderate)'],
@@ -575,7 +590,7 @@ add_table(doc,
          '⬇严重¹', '⚠不降级⁷', '✅无降级³', '⬇严重⁸', '⬇严重⁵', '低(Low)'],
     ])
 add_para(doc,
-    '降级理由：¹PEDro中位5.9/10，分配隐藏仅14%，评估者盲法仅17%；²主分析池I²=67-78%，'
+    '降级理由：¹PEDro中位5.9/10，分配隐藏仅5%，评估者盲法仅17%；²主分析池I²=67-78%，'
     '属严重不一致；³干预/结局/人群直接对应PICOS；⁴多项研究n<20，预测区间跨零；'
     '⁵Egger p<0.001，SE-g r=0.88，信号强烈；⁶I²=13%；⁷k=2，I²=0%但95%CI不可计算（k<3），'
     '鉴于k过小导致I²趋于0可为数学假象，且CI极宽，精确性域额外降1级；'
@@ -604,10 +619,10 @@ findings = [
     '合并效应量仍为g=+0.85[95%CI:+0.55,+1.15]，I²降至41%。',
     '干预时长是最重要的效应调节变量：短期训练（≤6周）产生一致的中等效应（g=+0.60, I²=13%），而中长期训练'
     '（>6周）效应更大但异质性更高（g=+1.46~1.85, I²=61-94%）。Meta回归确认了显著的线性时长-效应关系'
-    '（每周+0.13 SMD, p=0.026）。',
+    '（每周+0.13 SMD, p=0.023）。',
     '青少年运动员的增益尤为突出：青春期前和青春期亚组的效应量达g=+1.37~1.51，且完全同质（I²=0%）。',
 
-    '值得注意的是，严格手叉腰池的95%预测区间（PI）为[-0.878, +3.134]，其下限跨入负值区域。'
+    '值得注意的是，严格手叉腰池的95%预测区间（PI）为[-0.564, +2.819]，其下限跨入负值区域。'
     '预测区间反映了在真实世界的单个研究中，Plyometric训练对CMJ高度的预期效应范围。'
     'PI跨零并不否定平均效应的大效应量（g=+1.13），但提示在某些特定条件下——'
     '例如训练依从性差、基线体能水平较高、或干预方案设计不当——Plyometric训练可能产生零甚至负效应。'
@@ -648,7 +663,7 @@ add_para(doc,
 add_heading_styled(doc, '4.3  干预时长-效应关系与剂量-反应意义', 2)
 add_para(doc,
     '本研究最稳健的发现之一是干预时长与效应量之间的正向关系。Meta回归显示干预时长每增加1周，预期SMD增加'
-    '约0.13（p=0.026）；多变量模型在控制CMJ手臂位置后，时长仍然显著（p=0.021）。每周训练次数同样为显著的'
+    '约0.13（p=0.023）；多变量模型在控制CMJ手臂位置后，时长仍然显著（p=0.021）。每周训练次数同样为显著的'
     '正向预测变量（p=0.020），提示训练频率与时长共同构成Plyometric训练的"剂量"维度。')
 add_para(doc,
     '然而，需要审慎解读的是，长期亚组（>10周，k=4）的效应量虽然最大（g=+1.85），但异质性极高（I²=94%），'
@@ -735,7 +750,7 @@ limitations = [
      'vs.连续纵跳）可能是重要的效应调节因素，但多数纳入研究未充分报告这些信息，故无法纳入分析。'),
     ('多重比较未校正。',
      '本研究进行了6个亚组分析+6个单变量Meta回归，共12次独立检验。未采用Bonferroni或FDR等多重比较校正。'
-     '虽然探索性Meta分析通常不强制校正，但p=0.026（干预时长）和p=0.020（每周训练次数）如经Bonferroni校正'
+     '虽然探索性Meta分析通常不强制校正，但p=0.023（干预时长）和p=0.020（每周训练次数）如经Bonferroni校正'
      '（校正后α=0.05/12≈0.004），将不再显著。因此这些发现应视为探索性信号而非确证性结论，需未来更大样本'
      '的独立研究加以验证。'),
     ('Meta回归的线性假设。',
@@ -811,50 +826,90 @@ add_heading_styled(doc, '参考文献', 1)
 
 references = [
     '[1] Markovic G. Does plyometric training improve vertical jump height? A meta-analytical '
-    'review. Br J Sports Med. 2007;41(6):349-355.',
+    'review. Br J Sports Med. 2007;41(6):349-355. '
+    'doi:10.1136/bjsm.2006.030676',
+
     '[2] de Villarreal ESS, Kellis E, Kraemer WJ, Izquierdo M. Determining variables of '
     'plyometric training for improving vertical jump height performance: a meta-analysis. '
-    'J Strength Cond Res. 2009;23(2):495-506.',
+    'J Strength Cond Res. 2009;23(2):495-506. '
+    'doi:10.1519/JSC.0b013e318196b7c6',
+
     '[3] Taube W, Leukel C, Gollhofer A. How neurons make us jump: the neural control of '
-    'stretch-shortening cycle movements. Exerc Sport Sci Rev. 2012;40(2):106-115.',
+    'stretch-shortening cycle movements. Exerc Sport Sci Rev. 2012;40(2):106-115. '
+    'doi:10.1097/JES.0b013e31824e0e7e',
+
     '[4] Claudino JG, Cronin J, Mezêncio B, et al. The countermovement jump to monitor '
-    'neuromuscular status: a meta-analysis. J Sci Med Sport. 2017;20(4):397-402.',
+    'neuromuscular status: a meta-analysis. J Sci Med Sport. 2017;20(4):397-402. '
+    'doi:10.1016/j.jsams.2016.08.011',
+
     '[5] Moran J, Clark CCT, Ramirez-Campillo R, et al. A meta-analysis of plyometric training '
     'in female youth: its efficacy and shortcomings in the literature. J Strength Cond Res. '
-    '2019;33(7):1996-2008.',
+    '2019;33(7):1996-2008. '
+    'doi:10.1519/JSC.0000000000002771',
+
     '[6] Ramirez-Campillo R, Alvarez C, García-Hermoso A, et al. Effects of plyometric jump '
     'training in female soccer player\'s vertical jump height: a systematic review with '
-    'meta-analysis. J Sports Sci. 2020;38(14):1641-1648.',
+    'meta-analysis. J Sports Sci. 2020;38(14):1641-1648. '
+    'doi:10.1080/02640414.2020.1755052',
+
     '[7] Sole S, Ramirez-Campillo R, Andrade DC, et al. Plyometric jump training effects on '
     'the physical fitness of individual-sport athletes: a systematic review with meta-analysis. '
-    'PeerJ. 2021;9:e11004.',
+    'PeerJ. 2021;9:e11004. '
+    'doi:10.7717/peerj.11004',
+
     '[8] Harman EA, Rosenstein MT, Frykman PN, Rosenstein RM. The effects of arms and '
-    'countermovement on vertical jumping. Med Sci Sports Exerc. 1990;22(6):825-833.',
+    'countermovement on vertical jumping. Med Sci Sports Exerc. 1990;22(6):825-833. '
+    'doi:10.1249/00005768-199012000-00012',
+
     '[9] Slimani M, Chamari K, Miarka B, et al. Effects of plyometric training on physical '
-    'fitness in team sport athletes: a systematic review. J Hum Kinet. 2016;53:231-247.',
+    'fitness in team sport athletes: a systematic review. J Hum Kinet. 2016;53:231-247. '
+    'doi:10.1515/hukin-2016-0026',
+
     '[10] Bosco C, Viitasalo JT, Komi PV, Luhtanen P. Combined effect of elastic energy and '
     'myoelectrical potentiation during stretch-shortening cycle exercise. Acta Physiol Scand. '
-    '1982;114(4):557-565.',
+    '1982;114(4):557-565. '
+    'doi:10.1111/j.1748-1716.1982.tb07024.x',
+
     '[11] Markovic G, Mikulic P. Neuro-musculoskeletal and performance adaptations to '
-    'lower-extremity plyometric training. Sports Med. 2010;40(10):859-895.',
+    'lower-extremity plyometric training. Sports Med. 2010;40(10):859-895. '
+    'doi:10.2165/11318370-000000000-00000',
+
     '[12] Lloyd RS, Faigenbaum AD, Stone MH, et al. Position statement on youth resistance '
-    'training: the 2014 International Consensus. Br J Sports Med. 2014;48(7):498-505.',
+    'training: the 2014 International Consensus. Br J Sports Med. 2014;48(7):498-505. '
+    'doi:10.1136/bjsports-2013-092952',
+
     '[13] Radnor JM, Oliver JL, Waugh CM, et al. The influence of growth and maturation on '
-    'stretch-shortening cycle function in youth. Sports Med. 2018;48(1):57-71.',
+    'stretch-shortening cycle function in youth. Sports Med. 2018;48(1):57-71. '
+    'doi:10.1007/s40279-017-0785-0',
+
     '[14] Ramirez-Campillo R, Alvarez C, Garcia-Hermoso A, et al. Effects of plyometric jump '
     'training on the physical fitness of young team sport athletes: a systematic review with '
-    'meta-analysis. Scand J Med Sci Sports. 2020;30(7):1197-1214.',
+    'meta-analysis. Scand J Med Sci Sports. 2020;30(7):1179-1197. '
+    'doi:10.1111/sms.13711',
+
     '[15] Meylan CMP, Cronin JB, Oliver JL, et al. The effect of maturation on adaptations to '
     'strength training and detraining in 11-15-year-olds. J Strength Cond Res. '
-    '2014;28(5):1452-1462.',
+    '2014;28(5):1452-1462. '
+    'doi:10.1519/JSC.0000000000000281',
+
     '[16] Sale DG. Neural adaptation to resistance training. Med Sci Sports Exerc. '
-    '1988;20(5 Suppl):S135-S145.',
+    '1988;20(5 Suppl):S135-S145. '
+    'doi:10.1249/00005768-198810001-00008',
+
     '[17] Blazevich AJ, Gill ND, Zhou S. Intra- and intermuscular variation in human '
     'quadriceps femoris architecture assessed in vivo. J Anat. '
-    '2006;209(3):289-310.',
+    '2006;209(3):289-310. '
+    'doi:10.1111/j.1469-7580.2006.00625.x',
+
     '[18] Franchi MV, Ruoss S, Valdivieso P, et al. Regional regulation of focal adhesion kinase '
     'after concentric and eccentric loading is related to remodelling of human skeletal muscle. '
-    'Acta Physiol. 2022;234(1):e13741.',
+    'Acta Physiol. 2022;234(1):e13741. '
+    'doi:10.1111/apha.13741',
+
+    '[19] Sterne JAC, Sutton AJ, Ioannidis JPA, et al. Recommendations for examining and '
+    'interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials. '
+    'BMJ. 2011;343:d4002. '
+    'doi:10.1136/bmj.d4002',
 ]
 for ref in references:
     para = doc.add_paragraph()
