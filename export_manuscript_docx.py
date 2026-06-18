@@ -312,7 +312,7 @@ add_para(doc,
     '本系统综述与Meta分析已在PROSPERO预注册（注册号：CRD420261422906），'
     '并遵循PRISMA 2020报告规范（PRISMA 2020 Checklist见补充材料）。'
     '所有分析在Python 3.x + R 4.6/metafor混合环境中完成，'
-    '分析代码已上传至GitHub公开存储库（https://github.com/2107113846-sketch/plyometric-cmj-meta-analysis）。')
+    '分析代码已上传至GitHub/Zenodo公开存储库（https://doi.org/10.5281/zenodo.20748080）。')
 
 add_para(doc, '主分析：', bold=True)
 add_para(doc,
@@ -735,7 +735,7 @@ limitations = [
      '效应量更可能呈现递减回报（diminishing return）模式——前6-8周快速增长，之后增速放缓。本研究的线性模型'
      '在4-12周范围内具有合理近似性，但外推超出此范围需明确标注其推测性质。'),
     ('分析代码与数据可获取性。',
-     '本研究的完整分析代码已上传至GitHub公开存储库（https://github.com/2107113846-sketch/plyometric-cmj-meta-analysis），'
+     '本研究的完整分析代码已上传至GitHub/Zenodo公开存储库（https://doi.org/10.5281/zenodo.20748080），'
      '以便审稿人和读者复现全部分析流程。原始数据提取表已作为补充材料提交。'
      '然而，由于部分纳入研究的原始个体数据不可获取，本研究无法进行个体参与者数据'
      '（IPD）Meta分析，这限制了在更精细的受试者水平'
