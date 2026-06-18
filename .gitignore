@@ -2,6 +2,8 @@ __pycache__/
 *.pyc
 *.pyo
 .omc/
+.codex/
+.claude/
 *.xlsx
 .env
 .DS_Store
