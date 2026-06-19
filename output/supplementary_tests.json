@@ -1,0 +1,32 @@
+{
+  "strict": {
+    "k": 15,
+    "g": 1.1122,
+    "I2": 78.0885,
+    "begg_tau": 0.4286,
+    "begg_p": 0.0275,
+    "egger_int": -2.6349,
+    "egger_p": 0.0
+  },
+  "wide": {
+    "k": 27,
+    "g": 0.9856,
+    "I2": 67.7484,
+    "begg_tau": 0.4701,
+    "begg_p": 0.0004,
+    "egger_int": -1.3901,
+    "egger_p": 0.0
+  },
+  "meta_reg_r2": {
+    "baseline_tau2": 0.3587,
+    "baseline_I2": 66.8574,
+    "duration_R2": 15.7343,
+    "duration_resid_I2": 62.7723,
+    "sessions_R2": 16.3438,
+    "sessions_resid_I2": 62.82,
+    "age_R2": 0.0,
+    "age_resid_I2": 68.4,
+    "dur_sess_R2": 27.1411,
+    "dur_sess_resid_I2": 59.3597
+  }
+}

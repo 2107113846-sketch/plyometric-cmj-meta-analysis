@@ -1,0 +1,47 @@
+{
+  "arm_unclear": {
+    "k": 6,
+    "g": 0.7945,
+    "ci_low": 0.4652,
+    "ci_upp": 1.1239,
+    "I2": 20.3253,
+    "I2_ci_low": 0,
+    "I2_ci_upp": 85.9502,
+    "tau2": 0.0353,
+    "tau2_ci_low": 0,
+    "tau2_ci_upp": 0.8454,
+    "pred_low": 0.3007,
+    "pred_upp": 1.2884,
+    "label": "Arm-unclear (k=6)"
+  },
+  "cmja": {
+    "k": 6,
+    "g": 0.9772,
+    "ci_low": 0.2137,
+    "ci_upp": 1.7407,
+    "I2": 78.8196,
+    "I2_ci_low": 39.8568,
+    "I2_ci_upp": 97.9047,
+    "tau2": 0.6933,
+    "tau2_ci_low": 0.1235,
+    "tau2_ci_upp": 8.7052,
+    "pred_low": -0.8245,
+    "pred_upp": 2.7789,
+    "label": "CMJA带臂 (k=6)"
+  },
+  "mid": {
+    "k": 13,
+    "g": 0.9476,
+    "ci_low": 0.5554,
+    "ci_upp": 1.3398,
+    "I2": 56.4284,
+    "I2_ci_low": 22.0619,
+    "I2_ci_upp": 89.5415,
+    "tau2": 0.288,
+    "tau2_ci_low": 0.063,
+    "tau2_ci_upp": 1.9041,
+    "pred_low": -0.175,
+    "pred_upp": 2.0702,
+    "label": "Mid-term 7-10wk (k=13)"
+  }
+}

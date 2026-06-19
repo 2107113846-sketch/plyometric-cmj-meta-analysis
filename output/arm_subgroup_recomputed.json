@@ -1,0 +1,80 @@
+{
+  "cmja_all": {
+    "k": 9,
+    "g": 0.774,
+    "ci_low": 0.4176,
+    "ci_upp": 1.1304,
+    "I2": 47.834,
+    "I2_ci_low": 15.608,
+    "I2_ci_upp": 95.7866,
+    "tau2": 0.1316,
+    "tau2_ci_low": 0.0265,
+    "tau2_ci_upp": 3.2619,
+    "pred_low": -0.0212,
+    "pred_upp": 1.5693,
+    "label": "CMJA (all explicit+inferred, k=9)",
+    "study_ids": [
+      "R01",
+      "R02",
+      "R03",
+      "R05",
+      "R08",
+      "R12",
+      "R13",
+      "R17",
+      "R23"
+    ]
+  },
+  "arm_unclear": {
+    "k": 3,
+    "g": 1.0624,
+    "ci_low": 0.5707,
+    "ci_upp": 1.5542,
+    "I2": 0,
+    "I2_ci_low": 0,
+    "I2_ci_upp": 97.2057,
+    "tau2": 0,
+    "tau2_ci_low": 0,
+    "tau2_ci_upp": 6.7101,
+    "pred_low": 0.5707,
+    "pred_upp": 1.5542,
+    "label": "Arm-unclear (truly unclear, k=3)",
+    "study_ids": [
+      "R06",
+      "R20",
+      "R31"
+    ]
+  },
+  "strict_excl_r19": {
+    "k": 15,
+    "g": 1.1122,
+    "ci_low": 0.5988,
+    "ci_upp": 1.6257,
+    "I2": 78.0885,
+    "I2_ci_low": 63.2565,
+    "I2_ci_upp": 94.4999,
+    "tau2": 0.7815,
+    "tau2_ci_low": 0.3775,
+    "tau2_ci_upp": 3.7678,
+    "pred_low": -0.6949,
+    "pred_upp": 2.9194,
+    "label": "Strict hands-on-hip excl R19 (k=15)",
+    "study_ids": [
+      "R04",
+      "R07",
+      "R09",
+      "R10",
+      "R11",
+      "R14",
+      "R15",
+      "R16",
+      "R18",
+      "R21",
+      "R22",
+      "R26",
+      "R27",
+      "R29",
+      "R30"
+    ]
+  }
+}
