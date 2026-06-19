@@ -57,18 +57,18 @@ def main():
     wide = [r for r in rows if 'VJ' not in r['cmj_arm'] and r['effect_method'] == 'pre-post change SMD (Hedges g)']
     results['wide'] = pool_rows(wide, 'Wide all CMJ')
 
-    # === Short-term (≤6 weeks): known R-IDs from manuscript ===
-    short_ids = {'R01','R02','R04','R05','R06','R12','R13','R14','R15','R16','R20','R22','R24','R28'}
+    # === Short-term (≤6 weeks): known R-IDs from manuscript (R19 excluded due to SE/SD confusion) ===
+    short_ids = {'R01','R02','R04','R05','R06','R12','R13','R14','R15','R16','R20','R22'}
     short = [r for r in rows if r[sid_key] in short_ids and r['effect_method'] == 'pre-post change SMD (Hedges g)']
     results['short'] = pool_rows(short, 'Short-term <=6wk')
 
     # === Mid-term (7-10 weeks) ===
-    mid_ids = {'R03','R07','R08','R09','R10','R17','R18','R19','R21','R23','R25','R26','R29','R30'}
+    mid_ids = {'R03','R07','R08','R09','R10','R17','R18','R21','R23','R26','R29','R30','R31'}
     mid = [r for r in rows if r[sid_key] in mid_ids and r['effect_method'] == 'pre-post change SMD (Hedges g)']
     results['mid'] = pool_rows(mid, 'Mid-term 7-10wk')
 
     # === k=2 sub-groups: confint() needs k>=3, so these will fail gracefully ===
-    pre_ids = {'R05', 'R06'}
+    pre_ids = {'R14', 'R20'}
     pre = [r for r in rows if r[sid_key] in pre_ids and r['effect_method'] == 'pre-post change SMD (Hedges g)']
     print(f"\n=== Pre-pubertal (k={len(pre)}) ===")
     if len(pre) >= 3:
@@ -84,7 +84,7 @@ def main():
         except:
             print(f"  meta_pool_r failed for k=2")
 
-    pub_ids = {'R08', 'R15'}
+    pub_ids = {'R21', 'R26'}
     pub = [r for r in rows if r[sid_key] in pub_ids and r['effect_method'] == 'pre-post change SMD (Hedges g)']
     print(f"\n=== Pubertal (k={len(pub)}) ===")
     if len(pub) >= 3:

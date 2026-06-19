@@ -118,6 +118,8 @@ def main():
     print()
 
     strict_mask = df['cmj_arm'].str.contains('手叉腰', case=False, na=False)
+    # Also exclude R19 from strict pool (SD/SE confusion)
+    strict_mask = strict_mask & (df['study_id'] != 'R19')
     # Wide pool: exclude only明确VJ带臂
     wide_mask = ~df['cmj_arm'].str.contains('VJ带臂', case=False, na=False)
 
