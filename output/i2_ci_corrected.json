@@ -28,5 +28,35 @@
     "tau2_ci_upp": 1.7407,
     "pred_low": -0.2049,
     "pred_upp": 2.2086
+  },
+  "short": {
+    "label": "Short-term <=6wk",
+    "k": 12,
+    "g": 0.7095,
+    "ci_low": 0.4828,
+    "ci_upp": 0.9362,
+    "I2": 13.7608,
+    "I2_ci_low": 0,
+    "I2_ci_upp": 71.5844,
+    "tau2": 0.0219,
+    "tau2_ci_low": 0,
+    "tau2_ci_upp": 0.3451,
+    "pred_low": 0.3416,
+    "pred_upp": 1.0774
+  },
+  "mid": {
+    "label": "Mid-term 7-10wk",
+    "k": 13,
+    "g": 0.9476,
+    "ci_low": 0.5554,
+    "ci_upp": 1.3398,
+    "I2": 56.4284,
+    "I2_ci_low": 22.0619,
+    "I2_ci_upp": 89.5415,
+    "tau2": 0.288,
+    "tau2_ci_low": 0.063,
+    "tau2_ci_upp": 1.9041,
+    "pred_low": -0.175,
+    "pred_upp": 2.0702
   }
 }

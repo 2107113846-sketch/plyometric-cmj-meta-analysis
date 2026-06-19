@@ -358,7 +358,7 @@ add_para(doc,
     '本系统综述与Meta分析已在PROSPERO预注册（注册号：CRD420261422906），'
     '并遵循PRISMA 2020报告规范（PRISMA 2020 Checklist见补充材料）。'
     '所有分析在Python 3.x + R 4.6/metafor混合环境中完成，'
-    '分析代码已上传至GitHub/Zenodo公开存储库（https://doi.org/10.5281/zenodo.20748080）。')
+    '分析代码已上传至GitHub/Zenodo公开存储库（https://doi.org/10.5281/zenodo.20748080）。AI辅助工具（Claude AI, Anthropic）在数据分析代码调试与文本格式化组织方面提供了有限辅助，所有科学判断（包括纳入/排除决策、效应量计算策略、统计模型选择、GRADE评级、结果解读和结论推导）均由人类作者独立完成。')
 
 add_para(doc, '主分析：', bold=True)
 add_para(doc,
@@ -908,7 +908,7 @@ add_para(doc,
 add_para(doc,
     '方案获取：PROSPERO预注册方案（CRD420261422906）为本研究的正式方案文件，可通过PROSPERO数据库'
     '公开访问。分析代码已上传至Zenodo公开存储库（https://doi.org/10.5281/zenodo.20748080），'
-    '包括Python/R分析脚本和原始数据提取表。',
+    '包括Python/R分析脚本和原始数据提取表。本研究中AI辅助工具（Claude AI, Anthropic）的使用严格限于以下范围：数据分析代码的生成与调试、初稿文本的格式化组织、参考文献格式的整理和校对。所有科学判断（包括纳入/排除决策、效应量计算策略、统计模型选择、GRADE评级、结果解读和结论推导）均由人类作者独立完成。',
     size=Pt(12))
 
 # ================================================================
