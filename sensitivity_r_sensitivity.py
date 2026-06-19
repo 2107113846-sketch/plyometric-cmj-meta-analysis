@@ -117,11 +117,9 @@ def main():
     print(df['cmj_arm'].value_counts())
     print()
 
-    strict_mask = df['cmj_arm'].str.contains('手叉腰', case=False, na=False)
-    # Also exclude R19 from strict pool (SD/SE confusion)
-    strict_mask = strict_mask & (df['study_id'] != 'R19')
-    # Wide pool: exclude only明确VJ带臂
-    wide_mask = ~df['cmj_arm'].str.contains('VJ带臂', case=False, na=False)
+    strict_mask = df['cmj_arm'].str.contains('手叉腰', case=False, na=False) & ~df['cmj_arm'].str.contains('VJ', case=False, na=False) & (df['study_id'] != 'R19')
+    # Wide pool: exclude VJ带臂 and R19
+    wide_mask = ~df['cmj_arm'].str.contains('VJ带臂', case=False, na=False) & (df['study_id'] != 'R19')
 
     strict_df = df[strict_mask].copy()
     wide_df = df[wide_mask].copy()
@@ -183,12 +181,12 @@ def main():
     print("\n--- SUBGROUP I2 CIs (r=0.7) ---")
 
     subgroups = {
-        'Short ≤6wk': df[df['data_note'].str.contains('≤6|短期|short', case=False, na=False) | (df['study_id'].isin(['R04','R06','R09','R10','R14','R16','R19','R21','R23','R24','R25','R26','R28','R29']))],
+        'Short ≤6wk': df[df['data_note'].str.contains('≤6|短期|short', case=False, na=False) | (df['study_id'].isin(['R04','R06','R09','R10','R14','R16','R21','R23','R26','R29']))],
         'Medium 7-10wk': df[df['study_id'].isin(['R01','R02','R03','R07','R08','R11','R15','R20','R27','R30'])],
         'Long >10wk': df[df['study_id'].isin(['R05','R12','R13','R17'])],
-        'Pre-pubertal': df[df['study_id'].isin(['R21','R28'])],
-        'Pubertal': df[df['study_id'].isin(['R14','R24'])],
-        'Young Adult': df[df['study_id'].isin(['R01','R02','R03','R04','R09','R10','R16','R18','R19','R22','R25','R26','R30'])],
+        'Pre-pubertal': df[df['study_id'].isin(['R14','R20'])],
+        'Pubertal': df[df['study_id'].isin(['R21','R26'])],
+        'Young Adult': df[df['study_id'].isin(['R04','R07','R09','R10','R15','R16','R18','R22','R27','R29','R30'])],
     }
 
     for sg_name, sg_df in subgroups.items():

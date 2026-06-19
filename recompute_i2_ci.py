@@ -49,12 +49,15 @@ def main():
 
     results = {}
 
-    # === Strict pool: "手叉腰" in cmj_arm, exclude VJ ===
-    strict = [r for r in rows if '手叉腰' in r['cmj_arm'] and 'VJ' not in r['cmj_arm'] and r['effect_method'] == 'pre-post change SMD (Hedges g)']
+    # === Strict pool: "手叉腰" in cmj_arm, exclude VJ and R19 (SD/SE confusion) ===
+    strict = [r for r in rows if '手叉腰' in r['cmj_arm'] and 'VJ' not in r['cmj_arm']
+              and r[sid_key] != 'R19'
+              and r['effect_method'] == 'pre-post change SMD (Hedges g)']
     results['strict'] = pool_rows(strict, 'Strict hand-on-hip')
 
-    # === Wide pool: all change-score studies (exclude VJ-only) ===
-    wide = [r for r in rows if 'VJ' not in r['cmj_arm'] and r['effect_method'] == 'pre-post change SMD (Hedges g)']
+    # === Wide pool: all change-score studies (exclude VJ-only and R19) ===
+    wide = [r for r in rows if 'VJ' not in r['cmj_arm'] and r[sid_key] != 'R19'
+            and r['effect_method'] == 'pre-post change SMD (Hedges g)']
     results['wide'] = pool_rows(wide, 'Wide all CMJ')
 
     # === Short-term (≤6 weeks): known R-IDs from manuscript (R19 excluded due to SE/SD confusion) ===
