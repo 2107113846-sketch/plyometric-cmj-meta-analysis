@@ -51,6 +51,16 @@ def fmt_ci_pair(lo, hi):
 def fmt_pct_ci(lo, hi):
     return f"[{fmt_pct(lo)},{fmt_pct(hi)}]"
 
+# Load PET-PEESE results for publication bias section
+with open(OUTPUT_DIR / 'pet_peese_results.json', 'r', encoding='utf-8') as f:
+    pet_peese = json.load(f)
+
+pp_strict = pet_peese['strict']
+pp_wide = pet_peese['wide']
+
+def fmt_pp(v):
+    return f"{v:+.4f}" if v >= 0 else f"{v:.4f}"
+
 # Corrected values
 strict_g = strict['g']; strict_cl = strict['ci_low']; strict_cu = strict['ci_upp']
 strict_I2 = strict['I2']; strict_I2_l = strict['I2_ci_low']; strict_I2_u = strict['I2_ci_upp']
@@ -248,23 +258,24 @@ add_para(doc,
     f'宽版池g={fmt_g(wide_g)}{fmt_ci_pair(wide_cl, wide_cu)}，I²={fmt_pct(wide_I2)}{fmt_pct_ci(wide_I2_l, wide_I2_u)}，'
     f'预测区间[{fmt_g(wide.get("pred_low", -0.250))},{fmt_g(wide.get("pred_upp", 2.221))}]。'
     f'95%预测区间跨入负值区域，提示在特定条件下（如训练依从性差或基线体能较高）可能产生零甚至负效应。'
-    f'干预时长是效应量的潜在调节变量：短期(≤6周)g={fmt_g(short_g)}(I²={fmt_pct(short_I2)})、'
+    f'干预时长是效应量的潜在调节变量（探索性信号）：短期(≤6周)g={fmt_g(short_g)}(I²={fmt_pct(short_I2)})、'
     f'中期(7-10周)g={fmt_g(mid_g)}(I²={fmt_pct(mid_I2)})、'
     f'长期(>10周)g=+1.85(I²=94%)。Meta回归提示每周SMD增加约0.13'
-    f'（b=+0.131, SE=0.058, z=2.26, p=0.023），但未经多重比较校正（Bonferroni校正后α=0.05/12=0.00417，p=0.023不再显著）。'
+    f'（b=+0.131, SE=0.058, z=2.26, p=0.023），但经Bonferroni多重比较校正（校正后α=0.05/12≈0.00417）后不再显著，该剂量-反应关系属探索性发现，需独立验证。'
     f'青少年亚组效应最大(g=+1.37~1.51)但k=2证据不足。'
     f'Egger截距为负(−2.64)与SE-g高度正相关(r=+0.88)存在方向矛盾，发表偏倚信号需审慎解读。'
     f'Trim-and-Fill校正后效应量反增（严格池+13.8%），可能为高异质性(I²=78.1%)下校正效力受损。'
+    f'PET-PEESE分析因高异质性下方法稳定性受限（PET截距为负，PEESE校正估计亦为负值），提示方法的校正方向不支持简单的"缺失阴性研究"模式。'
     f'r=0.5/0.9敏感性分析确认效应方向始终正向显著。',
     size=Pt(12), first_line_indent=Cm(0.74))
 
 add_para(doc, '解读：', bold=True, size=Pt(12), first_line_indent=Cm(0.74),
          spacing_after=Pt(2))
 add_para(doc,
-    'Plyometric训练对CMJ高度表现出大效应提升（但GRADE证据等级为低，建议谨慎解读），短期训练(≤6周)即可获得可靠的中等效应。'
-    '干预时长与效应量呈非线性剂量-反应关系（短期g≈+0.71→中期g≈+0.95，增幅平缓；中期→长期g≈+1.85，出现显著跃升，但长期I²=94%且预测区间跨零）。'
+    'Plyometric训练对CMJ高度可能具有正向效应（基于当前低确定性证据，GRADE证据等级为低，建议谨慎解读），短期训练(≤6周)即可获得相对可靠的中等效应（该亚组GRADE为中等）。'
+    '干预时长与效应量的关系呈现非线性模式（短期g≈+0.71→中期g≈+0.95→长期g≈+1.85），但剂量-反应关系在Bonferroni多重比较校正后不再显著（校正α=0.05/12≈0.00417），属探索性发现，需未来研究独立验证。'
     '青少年效应量数值最大，但相关亚组样本量不足（k=2）。'
-    '发表偏倚信号强烈，效应量可能为偏上限估计。建议所有CMJ测试明确报告手臂位置。',
+    '发表偏倚信号强烈，效应量可能为偏上限估计。PET-PEESE分析因高异质性(I²=' + fmt_pct(strict_I2) + ')下方法稳定性受限，其校正估计与原始REML估计的差异方向不支持简单的"缺失阴性研究"解释。建议所有CMJ测试明确报告手臂位置。',
     size=Pt(12), first_line_indent=Cm(0.74))
 
 add_para(doc, '资金与注册：', bold=True, size=Pt(12), first_line_indent=Cm(0.74),
@@ -567,8 +578,9 @@ add_para(doc,
     f'异质性：τ²=0.376 [95%CI: 0.275, 1.849]，I²={fmt_pct(wide_I2)} [95% CI: {fmt_pct(wide_I2_l)}, {fmt_pct(wide_I2_u)}]，'
     f'Q({wide_k-1})=86.34，p<0.001。')
 add_para(doc,
-    '解释：Plyometric训练对CMJ高度可能表现出大效应提升（Cohen\'s标准：g>0.8=大效应）。'
-    '结果在两种分析池中高度一致。R19(Michailidis 2018)因SD/SE来源无法确认（CI反推存在SE/SD歧义，效应量被高估约4.0倍）从严格池排除，排除后Δg仅−0.016，在敏感性范围内。')
+    '解释：Plyometric训练对CMJ高度可能具有正向效应——合并效应量属Cohen\'s标准下的大效应范围（g>0.8），'
+    '但需结合整体GRADE证据确定性为低（Low）进行审慎解读：进一步研究很可能改变该效应量估计。'
+    '结果在两种分析池中方向一致。R19(Michailidis 2018)因SD/SE来源无法确认（CI反推存在SE/SD歧义，效应量被高估约4.0倍）从严格池排除，排除后Δg仅−0.016，在敏感性范围内。')
 
 add_figure(doc,
     str(OUTPUT_DIR / 'forest_strict_hand_on_hip.png'),
@@ -677,9 +689,17 @@ add_table(doc,
         ['CMJ手臂位置', '−0.104', '0.184', '−0.57', '0.570'],
     ])
 add_para(doc,
-    '干预时长每增加1周，预期SMD增加约0.13（p=0.023）。根据模型预测：4周干预预期g≈+0.53，'
-    '12周干预预期g≈+1.57。多变量模型（时长+臂位）中，时长在控制臂位后仍显著（b=+0.136, p=0.021），'
-    '臂位不显著（b=−0.149, p=0.386）。干预时长是独立于CMJ臂位的稳健预测变量。')
+    '干预时长每增加1周，预期SMD增加约0.13（p=0.023）。多变量模型（时长+臂位）中，时长在控制臂位后'
+    '关联仍然存在（b=+0.136, p=0.021），臂位不显著（b=−0.149, p=0.386）。'
+    '需注意：上述关联在Bonferroni多重比较校正（校正后α=0.05/12≈0.00417）后不再显著，应视为探索性信号，需独立验证。'
+    '根据未经校正的线性模型，4周干预预期g≈+0.53，12周干预预期g≈+1.57——但线性模型在纳入研究范围（4-16周）外'
+    '的外推需极其审慎（参见4.7节局限）。')
+add_para(doc,
+    '附：Benjamini-Hochberg FDR校正结果。对12项检验的p值进行FDR校正后：'
+    '干预时长（原始p=0.023, FDR p=0.138）和每周训练次数（原始p=0.020, FDR p=0.138）的FDR p值均>0.05，'
+    '进一步确认这些关联在控制多重比较后属探索性发现而非确证性结论。'
+    '本文正文中对Meta回归结果的解读均采用探索性框架。',
+    size=Pt(12), first_line_indent=Cm(0.74))
 
 # ================================================================
 # 3.8 Publication Bias (unchanged)
@@ -722,8 +742,44 @@ add_para(doc,
     '发表偏倚（小样本阴性研究缺失），而更可能反映小样本研究因更高强度的训练方案和更密切'
     '的监督而产生了更大的真实效应——这与Meta回归中每周训练次数为显著正向预测变量（p=0.020）'
     '的发现一致。这一模式与Sterne等（2011）关于发表偏倚与小研究效应需由多种方法互补评估的建议一致[18]。'
-    '校正后的效应量仍属大效应范畴（g>0.8），进一步支持了Plyometric训练对CMJ高度'
-    '的正向效应。')
+    '校正后的效应量仍属大效应范畴（g>0.8），但鉴于Trim-and-Fill校正后效应量反增（+13.8%）且PET-PEESE校正方向不稳定，'
+    '该校正估计应视为方法敏感性检验而非精确的偏倚校正——校正结果与原始估计的方向一致（均为正向大效应），但量级的不确定性较大。')
+
+add_para(doc,
+    'PET-PEESE分析（补充发表偏倚校正）：鉴于Trim-and-Fill校正后效应量反增（+13.8%）'
+    '提示该方法在高异质性（I²=' + fmt_pct(strict_I2) + '）条件下可能失效，本研究进一步采用PET-PEESE'
+    '（Precision-Effect Test / Precision-Effect Estimate with Standard Error）方法进行补充分析。'
+    'PET-PEESE通过两步程序评估发表偏倚：首先以效应量对标准误做Meta回归（PET），若截距显著偏离零则表明存在发表偏倚，'
+    '转为以效应量对方差（SE²）做Meta回归（PEESE）以获得校正估计[18]。\n\n'
+    'PET结果（严格池k=' + str(pp_strict['k']) + '）：g~SE回归，截距=' + fmt_pp(pp_strict['pet_intercept']) + '（g在SE→0即无限精度下的估计），'
+    '斜率=' + fmt_pp(pp_strict['pet_slope']) + '（SE每增加1单位，g的变化），SE(斜率)=' + fmt_pp(pp_strict['pet_se_slope']) + '，'
+    '|t|=' + str(abs(pp_strict['pet_t_slope'])) + '，R²=' + str(pp_strict['pet_r2']) + '。\n'
+    'PEESE结果（严格池）：g~SE²回归，截距=' + fmt_pp(pp_strict['peese_intercept']) + '，'
+    '斜率=' + fmt_pp(pp_strict['peese_slope']) + '，SE(斜率)=' + fmt_pp(pp_strict['peese_se_slope']) + '，R²=' + str(pp_strict['peese_r2']) + '。\n\n'
+    'PET截距为负值（' + fmt_pp(pp_strict['pet_intercept']) + '），理论上当PET截距≤0时应首选PEESE估计'
+    '（Stanley & Doucouliagos, 2014），但PEESE截距亦为负值（' + fmt_pp(pp_strict['peese_intercept']) + '），'
+    '与原始REML随机效应估计（g=' + fmt_g(round(strict_g, 2)) + '）方向不一致。\n\n'
+    '宽版池（k=' + str(pp_wide['k']) + '）结果类似：PET截距=' + fmt_pp(pp_wide['pet_intercept']) + '，'
+    'PEESE截距=' + fmt_pp(pp_wide['peese_intercept']) + '（原始REML g=' + fmt_g(round(wide_g, 2)) + '），两者均为负值。\n\n'
+    '解读与局限：PET-PEESE在此数据中产生不稳定的负值校正估计，与原始正向合并效应量方向矛盾。这并不表明Plyometric训练'
+    '对CMJ高度无正向效应（多项敏感性分析和亚组分析一致支持正向效应），而是提示：在k=' + str(pp_strict['k']) + '且存在极端效应量'
+    '（R11 Sedano Campo 2009: g=+5.20; R27 Toumi 2004: g=+2.94）的数据结构中，PET-PEESE对杠杆点高度敏感，'
+    '且高异质性（I²=' + fmt_pct(strict_I2) + '）可能导致Meta回归斜率估计被极端值主导。'
+    'Stanley（2017）和Carter等（2019）指出PET-PEESE在k<20且存在实质性异质性（I²>50%）时校正效果'
+    '有限且可能出现方向错误的校正。因此，本研究的PET-PEESE结果不宜作为精确的偏倚校正估计，'
+    '而应视为对已有发表偏倚评估的补充敏感性分析——其不稳定性进一步支持了本研究"效应量可能为偏上限估计"'
+    '的审慎定位。综合Egger、Begg、Peters、Trim-and-Fill、PET-PEESE五种方法的结果，'
+    '最合理的解读为：发表偏倚信号强烈但不能定量校正，合并效应量应解读为偏上限估计。')
+
+add_para(doc,
+    '综合发表偏倚评估：本研究采用了Egger回归、Begg秩相关、Peters回归、SE-g相关、Trim-and-Fill'
+    '以及PET-PEESE共六种互补方法进行发表偏倚/小研究效应评估。所有方法的统计检验均显著（p<0.05），'
+    '一致提示小研究效应的存在。然而，校正方向的不一致性（Trim-and-Fill和PEESE校正后效应量方向改变）'
+    '提示在高异质性（I²=' + fmt_pct(strict_I2) + '）和多杠杆点共存的数据结构中，所有校正方法均面临效力受限的问题。'
+    '参考Stanley等（2017, Res Syn Meth）关于多方法联合评估的建议，本研究的保守定位为：'
+    '发表偏倚/小研究效应信号强烈且一致（六种方法交叉验证），原始合并效应量（g=' + fmt_g(round(strict_g, 2)) + '）'
+    '应视为真实效应的偏上限估计；短期亚组（I²=' + fmt_pct(short_I2) + '）因低异质性，其效应量估计（g≈' + fmt_g(short_g) + '）受发表偏倚的影响相对较小。',
+    size=Pt(12), first_line_indent=Cm(0.74))
 
 # ================================================================
 # 3.9 GRADE — V3 corrected
@@ -779,15 +835,18 @@ add_para(doc,
 
 # V3: 4.1 findings — mid-term updated
 findings = [
-    f'Plyometric训练对CMJ高度可能表现出大效应提升：严格手叉腰池合并Hedges\' g={fmt_g(round(strict_g,2))}[95%CI:{fmt_ci_pair(strict_cl, strict_cu).strip("[]")}，'
+    f'Plyometric训练对CMJ高度可能具有正向效应：严格手叉腰池合并Hedges\' g={fmt_g(round(strict_g,2))}[95%CI:{fmt_ci_pair(strict_cl, strict_cu).strip("[]")}，'
     f'宽版全池g=+0.99[95%CI:+0.70,+1.28]，效应量均属Cohen\'s标准下的大效应范围（g>0.8）。需注意，整体证据GRADE评级为低，表明进一步研究很可能改变该效应量估计。',
     '结果在多项敏感性分析下高度稳健：剔除两个最有影响力的离群值（R11 Sedano Campo 2009和R27 Toumi 2004）后，'
-    '合并效应量仍为g=+0.79[95%CI:+0.49,+1.10]，I²降至37%。',
-    # V3 corrected: 0.71->0.95->1.85 non-linear pattern
-    '干预时长是效应量的潜在调节变量（未经多重比较校正）：短期训练（≤6周）产生一致的中等效应（g≈+0.71, I²=14%），而中长期训练'
-    f'（>6周）效应量变化呈现非线性模式（短期→中期g=+0.71→{fmt_g(mid_g)}, I²={fmt_pct(mid_I2)}；'
-    f'中期→长期g={fmt_g(mid_g)}→+1.85, I²=94%）。Meta回归确认了显著的线性时长-效应关系'
-    '（每周+0.13 SMD, p=0.023），但分类亚组分析提示非线性特征——短期至中期增幅平缓，中期至长期出现显著跃升。',
+    '合并效应量仍为g=+0.79[95%CI:+0.49,+1.10]，I²降至37%。'
+    'g=+0.79（I²=37%）的离群值校正估计比g=' + fmt_g(round(strict_g, 2)) + '（I²=' + fmt_pct(strict_I2) + '）更具一致性，'
+    '可作为更保守的效应量参考值——两者均显示大效应量，但量级存在约0.32的差距。',
+    # V3 corrected: 0.71->0.95->1.85 non-linear pattern — now framed as exploratory
+    f'干预时长与效应量的关系呈现非线性模式（探索性发现，经Bonferroni校正α=0.05/12≈0.00417后不显著）：短期训练（≤6周）产生一致的中等效应（g≈+0.71, I²=14%），而中长期训练'
+    f'（>6周）效应量变化为短期→中期g=+0.71→{fmt_g(mid_g)}, I²={fmt_pct(mid_I2)}；'
+    f'中期→长期g={fmt_g(mid_g)}→+1.85, I²=94%。Meta回归提示线性时长-效应关系'
+    f'（每周+0.13 SMD, p=0.023），但经Bonferroni校正（α=0.05/12≈0.00417）后不再显著，属探索性信号而非确证性结论。'
+    '分类亚组分析提示非线性特征——短期至中期增幅平缓，中期至长期出现较大跃升但伴随极高异质性（I²=94%），长期估计需极其谨慎解读。',
     '青少年运动员的增益尤为突出：青春期前和青春期亚组的效应量达g=+1.37~1.51，且完全同质（I²=0%）。',
 
     f'值得注意的是，严格手叉腰池的95%预测区间（PI）为[{fmt_g(strict.get("pred_low", -0.695))}, {fmt_g(strict.get("pred_upp", 2.919))}]，其下限跨入负值区域。'
@@ -846,9 +905,11 @@ add_para(doc,
 # ================================================================
 add_heading_styled(doc, '4.3  干预时长-效应关系与剂量-反应意义', 2)
 add_para(doc,
-    '本研究最稳健的发现之一是干预时长与效应量之间的正向关系。Meta回归显示干预时长每增加1周，预期SMD增加'
-    '约0.13（p=0.023）；多变量模型在控制CMJ手臂位置后，时长仍然显著（p=0.021）。每周训练次数同样为显著的'
-    '正向预测变量（p=0.020），提示训练频率与时长共同构成Plyometric训练的"剂量"维度。')
+    '干预时长与效应量之间的正向关系是本研究的发现之一，但须明确标注为探索性信号（未经多重比较校正，'
+    'Bonferroni校正后α=0.05/12≈0.00417, p=0.023不再显著）。Meta回归显示干预时长每增加1周，预期SMD增加'
+    '约0.13（p=0.023）；多变量模型在控制CMJ手臂位置后，时长仍然关联（p=0.021）。每周训练次数同样为'
+    '正向预测变量（p=0.020）。这些关联提示训练频率与时长可能共同构成Plyometric训练的"剂量"维度，'
+    '但需未来更大样本的独立研究验证。')
 
 # V3: Rewritten dose-response narrative reflecting non-linear pattern (0.71 -> 0.95 -> 1.85)
 add_para(doc,
@@ -873,16 +934,16 @@ add_para(doc,
 # ================================================================
 add_heading_styled(doc, '4.4  年龄/发育阶段的调节作用', 2)
 add_para(doc,
-    '青少年运动员（青春期前及青春期）的效应量（g=+1.37~1.51）显著高于成年/职业运动员（g=+0.80），且青少年'
-    '亚组的异质性为零（I²=0%）。这一发现与发育神经肌肉可塑性理论一致：青春期前后是神经肌肉系统快速发展的'
+    '青少年运动员（青春期前及青春期）的效应量数值（g=+1.37~1.51）高于成年/职业运动员（g=+0.80），且青少年'
+    '亚组的异质性点估计为零（I²=0%）。这一发现与发育神经肌肉可塑性理论一致：青春期前后是神经肌肉系统快速发展的'
     '"敏感窗口"，此时引入Plyometric刺激可能与自然的神经肌肉成熟过程产生协同效应[12,13]。'
     '从发育生理学角度看，青春期前后pennation angle和tendon stiffness的快速增长期'
     '（Blazevich等，2006，J Anat[17]）可能为Plyometric训练的力学增益提供了独特的结构基础，'
     '即muscle gearing的发育可塑性使得训练诱导的肌力变化更有效地转化为功能性跳跃表现。成年和职业运动员的'
-    '效应量虽仍属大效应，但异质性更高（I²=83%），可能反映了训练背景和基础体能水平的差异对干预效果的稀释效应。'
+    '效应量数值虽仍较大，但异质性更高（I²=83%），可能反映了训练背景和基础体能水平的差异对干预效果的稀释效应。'
     '需要注意的是，青春期前和青春期亚组各仅含2篇研究（受限于当前文献总量），且k=2时I²=0%的置信区间'
-    '因k<3而不可计算（使用metafor的confint()要求k≥3），因此虽然I²=0%本身稳健，'
-    '但亚组效应量的外部推广性仍需更多研究验证。')
+    '因k<3而不可计算（使用metafor的confint()要求k≥3），因此虽然I²=0%点估计本身稳健，'
+    '但亚组效应量的外部推广性仍需更多研究验证。"敏感窗口"假说仅能作为初步信号而非确证性结论。')
 
 add_heading_styled(doc, '4.5  CMJ手臂位置：方法学启示', 2)
 add_para(doc,
@@ -1312,7 +1373,7 @@ for ref in references:
 # ================================================================
 # SAVE
 # ================================================================
-output_path = PROJ / 'Plyo训练CMJ高度Meta分析_初稿_v3.docx'
+output_path = PROJ / 'Plyo训练CMJ高度Meta分析_v4.docx'
 doc.save(str(output_path))
-print(f'\n已保存 v3: {output_path}')
+print(f'\n已保存 v4: {output_path}')
 print('完成！')

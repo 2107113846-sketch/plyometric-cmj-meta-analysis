@@ -1,0 +1,28 @@
+{
+  "strict": {
+    "pet_intercept": -2.9769,
+    "pet_slope": 8.4527,
+    "pet_se_slope": 1.1111,
+    "pet_t_slope": 7.607,
+    "pet_r2": 0.817,
+    "peese_intercept": -0.5362,
+    "peese_slope": 6.6454,
+    "peese_se_slope": 0.8014,
+    "peese_t_slope": 8.292,
+    "peese_r2": 0.841,
+    "k": 15,
+    "note": "PET-PEESE: g ~ SE (PET) or g ~ SE^2 (PEESE). When PET intercept > 0, PEESE is recommended."
+  },
+  "wide": {
+    "pet_intercept": -2.1718,
+    "pet_slope": 7.0454,
+    "pet_se_slope": 0.7968,
+    "pet_r2": 0.758,
+    "peese_intercept": -0.3625,
+    "peese_slope": 6.2692,
+    "peese_se_slope": 0.5571,
+    "peese_r2": 0.835,
+    "k": 27,
+    "note": "PET-PEESE: g ~ SE (PET) or g ~ SE^2 (PEESE). When PET intercept > 0, PEESE is recommended."
+  }
+}
