@@ -1,0 +1,33 @@
+=== Protocol Deviations from PROSPERO Registration (CRD420261422906) ===
+
+PROSPERO registration date: 2026-04-15
+Final analysis date: 2026-06-21
+
+Deviation 1: R19 (Michailidis 2018) excluded from primary analysis pool
+  Pre-registered: All RCTs meeting PICOS with hands-on-hips CMJ included
+  Actual: R19 excluded due to irresolvable SD/SE ambiguity
+  Reason: CI back-calculation revealed ~4.0x ambiguity in effect size estimate
+  Direction: Conservative (exclusion slightly decreased pooled g by -0.016)
+  Sensitivity: Including R19 does not change conclusions
+
+Deviation 2: CMJ device sensitivity analysis not performed
+  Pre-registered: Subgroup analysis by CMJ test device
+  Actual: Not performed due to insufficient k per device subgroup
+  Reason: Most device subgroups had k<3, precluding meaningful analysis
+
+Deviation 3: Sex-stratified analysis not performed
+  Pre-registered: Subgroup analysis by sex (male vs. female vs. mixed)
+  Actual: Reported as planned but only descriptively noted (k per sex stratum insufficient)
+
+Deviation 4: Post-only SMD not reported as primary
+  Pre-registered: Both change-score and post-only SMD to be compared
+  Actual: Post-only SMD not reported due to lower statistical efficiency
+  Reference: Morris & DeShon (2002) demonstrate superiority of change-score approach
+
+Deviation 5: Limited grey literature search
+  Pre-registered: Comprehensive grey literature search (ProQuest, ClinicalTrials.gov)
+  Actual: Only Google Scholar and reference list tracing performed
+  Reason: Resource constraint; partially mitigated by multiple publication bias assessments
+
+Overall assessment: Deviations are conservative in direction (likely to underestimate
+rather than overestimate the true effect). No deviation substantively changes conclusions.

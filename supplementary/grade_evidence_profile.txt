@@ -1,0 +1,57 @@
+=== GRADE Evidence Profile (Standardized Table) ===
+
+Question: Does plyometric training improve CMJ height?
+Setting: RCTs in healthy populations (athletes, recreationally active, general)
+Starting evidence level: HIGH (RCTs)
+
+--------------------------------------------------------------------------------
+OUTCOME 1: CMJ Height — Strict Hands-on-Hips Pool (k=15, n=310)
+--------------------------------------------------------------------------------
+Risk of Bias:       DOWNGRADE 1 level (serious)
+  PEDro median 5.9/10; allocation concealment 7%; blinded assessor 15%
+Inconsistency:      DOWNGRADE 1 level (serious)
+  I²=78.1% [95%CI: 63.3%, 94.5%]; wide CI; tau²=0.781
+Indirectness:       NO DOWNGRADE
+  Intervention, outcome, and population directly match PICOS
+Imprecision:        DOWNGRADE 1 level (serious)
+  Multiple studies n<20; prediction interval crosses zero [-0.695, +2.919]
+Publication Bias:   DOWNGRADE 1 level (serious)
+  Egger p<0.001; SE-g r=+0.88; Begg p=0.028; all 6 methods signal positive
+Final: LOW (downgraded 4 levels from HIGH)
+
+--------------------------------------------------------------------------------
+OUTCOME 2: CMJ Height — Short-term Subgroup (<=6wk, k=12, n=~240)
+--------------------------------------------------------------------------------
+Risk of Bias:       DOWNGRADE 1 level (serious)
+  Similar PEDro profile as main analysis
+Inconsistency:      some concerns (not downgraded)
+  I²=13.8% [0%, 71.6%]; Q-profile CI upper bound >50% noted
+Indirectness:       NO DOWNGRADE
+Imprecision:        DOWNGRADE 1 level (serious)
+  Some studies n<20
+Publication Bias:   DOWNGRADE 0.5 level (moderate)
+  Lower heterogeneity → Egger false-positive risk lower than main pool
+Final: MODERATE (downgraded ~2.5 levels)
+
+--------------------------------------------------------------------------------
+OUTCOME 3: CMJ Height — Pre-pubertal/Pubertal Subgroups (k=2 each)
+--------------------------------------------------------------------------------
+Risk of Bias:       DOWNGRADE 1 level (serious)
+Inconsistency:      NR (k insufficient for heterogeneity inference)
+  Note: I²=0% is mathematically constrained at k=2
+Indirectness:       NO DOWNGRADE
+Imprecision:        DOWNGRADE 2 level (very serious)
+  k=2 only; CI extremely wide; k small already captured here (not double-counted)
+Publication Bias:   DOWNGRADE 1 level (serious)
+Final: LOW
+
+--------------------------------------------------------------------------------
+Footnotes:
+1 PEDro median 5.9/10, allocation concealment 7%, assessor blinding 15%
+2 Main pool I²=78.1%, severe inconsistency
+3 Direct correspondence to PICOS
+4 Multiple studies n<20, prediction interval crosses zero
+5 Publication bias tiered: main pool (I²=78.1%) downgrade 1, short-term (I²=13.8%) downgrade 0.5
+6 I²=13.8% [0%, 71.6%]; Q-profile upper bound exceeds 50% inconsistency threshold
+7 k=2: I²=0% mathematically constrained (only 0% or 100% possible); labeled NR
+8 k=2, CI wide, imprecision additional downgrade

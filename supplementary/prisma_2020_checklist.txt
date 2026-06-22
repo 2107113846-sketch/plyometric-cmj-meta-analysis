@@ -1,0 +1,46 @@
+=== PRISMA 2020 Checklist ===
+
+Section/Topic | # | Checklist Item | Reported on Page
+--------------|---|----------------|------------------
+TITLE | 1 | Identify the report as a systematic review | p.1 (title)
+ABSTRACT | 2 | See PRISMA 2020 for Abstracts checklist | p.1-2
+RATIONALE | 3 | Describe the rationale for the review | p.2-4 (Section 1)
+OBJECTIVES | 4 | Provide an explicit statement of the objective(s) | p.4 (Section 1, final para)
+ELIGIBILITY CRITERIA | 5 | Specify inclusion/exclusion criteria | p.4-5 (Section 2.2)
+INFORMATION SOURCES | 6 | Specify all databases, registers, other sources | p.4 (Section 2.1)
+SEARCH STRATEGY | 7 | Present full search strategies for all databases | p.4 (Section 2.1) + Supplementary S1
+SELECTION PROCESS | 8 | Specify methods for screening | p.5 (Section 2.3)
+DATA COLLECTION PROCESS | 9 | Specify methods for data extraction | p.5 (Section 2.4)
+DATA ITEMS | 10a | List and define all outcomes | p.5 (Section 2.4)
+| 10b | List all other variables | p.5 (Section 2.4)
+STUDY RISK OF BIAS | 11 | Specify methods for assessing RoB | p.5-6 (Section 2.5)
+EFFECT MEASURES | 12 | Specify effect measures (Hedges g, I²) | p.6 (Section 2.6)
+SYNTHESIS METHODS | 13a | Describe processes for deciding which studies eligible | p.4-5 (Section 2.2)
+| 13b | Describe methods for preparing data | p.5 (Section 2.4)
+| 13c | Describe methods for tabulating/visualizing | p.6-7 (Section 2.7)
+| 13d | Describe methods for synthesis | p.6-7 (Section 2.7)
+| 13e | Describe methods for exploring heterogeneity | p.6-7 (Section 2.7)
+| 13f | Describe sensitivity analyses | p.7 (Section 2.7)
+REPORTING BIAS | 14 | Describe methods for assessing reporting bias | p.8 (Section 2.7)
+CERTAINTY ASSESSMENT | 15 | Describe methods for assessing certainty (GRADE) | p.8 (Section 2.7)
+STUDY SELECTION | 16a | Describe results of search and selection | p.8 (Section 3.1)
+| 16b | Cite PRISMA flow diagram | p.8 (Figure 1)
+STUDY CHARACTERISTICS | 17 | Cite each included study | p.8-9 (Section 3.2, Table 1)
+RISK OF BIAS | 18 | Present assessments of RoB | p.9 (Section 3.3, Table 2)
+RESULTS OF SYNTHESES | 19 | Present results of all statistical syntheses | p.9-17 (Sections 3.4-3.9)
+| 20a | Present results of all syntheses | p.9-17
+| 20b | Present results of heterogeneity exploration | p.11-13 (Sections 3.6-3.7)
+| 20c | Present results of sensitivity analyses | p.10-11 (Section 3.5)
+| 20d | Present results of publication bias assessments | p.13-16 (Section 3.8)
+REPORTING BIAS | 21 | Present assessments of reporting bias | p.13-16 (Section 3.8)
+CERTAINTY | 22 | Present assessments of certainty (GRADE) | p.16-17 (Section 3.9, Table 8)
+DISCUSSION | 23a | Provide general interpretation | p.17-26 (Section 4)
+| 23b | Discuss limitations of evidence | p.22-24 (Section 4.7)
+| 23c | Discuss limitations of review processes | p.22-24 (Section 4.7)
+| 23d | Discuss implications for practice/research | p.24-26 (Section 4.8)
+OTHER INFORMATION | 24a | Provide registration information | p.1, p.26
+| 24b | Report protocol access | p.26 (PROSPERO: CRD420261422906)
+| 24c | Describe amendments to protocol | p.26 + Supplementary S4
+| 25 | Describe sources of financial support | p.26 (Section 5)
+| 26 | Declare competing interests | p.26 (Section 5)
+| 27 | State data/code availability | p.26 (Zenodo DOI: 10.5281/zenodo.20748080)

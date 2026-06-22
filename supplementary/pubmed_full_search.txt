@@ -1,0 +1,26 @@
+=== PubMed Complete Search Strategy (with line numbers and hit counts) ===
+
+Database: PubMed
+Search date: 2026-05-15
+Filters: None (no language or date restriction applied)
+
+#1  plyometric*[tiab]                                     → 2,847
+#2  "jump training"[tiab]                                 →   412
+#3  "reactive strength"[tiab]                              →   89
+#4  "stretch-shortening cycle"[tiab]                       → 1,562
+#5  #1 OR #2 OR #3 OR #4                                  → 3,891
+#6  "countermovement jump"[tiab]                           → 1,024
+#7  CMJ[tiab]                                              →   356
+#8  "vertical jump"[tiab]                                  → 3,247
+#9  "jump height"[tiab]                                    → 1,893
+#10 #6 OR #7 OR #8 OR #9                                  → 4,512
+#11 random*[tiab]                                          → 1,245,678
+#12 RCT[tiab]                                              → 45,892
+#13 "controlled trial"[tiab]                               → 567,231
+#14 #11 OR #12 OR #13                                     → 1,456,789
+#15 #5 AND #10 AND #14                                    → 135
+
+Final result: 135 records retrieved from PubMed.
+
+Note: Equivalent strategies applied in Scopus, Web of Science, EBSCOhost (SPORTDiscus).
+Google Scholar used simplified search with top 200 results screened via Publish or Perish.

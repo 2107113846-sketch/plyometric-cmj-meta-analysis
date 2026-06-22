@@ -1,0 +1,32 @@
+=== Supplementary Materials Index ===
+
+S1. PubMed Full Search Strategy with Line Numbers and Hit Counts
+    File: pubmed_full_search.txt
+
+S2. PET-PEESE Detailed Output
+    File: pet_peese_detailed_output.txt
+
+S3. R19 (Michailidis 2018) CI Back-Calculation Details
+    File: r19_ci_backcalculation.txt
+
+S4. Protocol Deviations from PROSPERO Registration
+    File: protocol_deviations.txt
+
+S5. PRISMA 2020 Checklist (with Page Number Annotations)
+    File: prisma_2020_checklist.txt
+
+S6. GRADE Evidence Profile (Standardized Table)
+    File: grade_evidence_profile.txt
+
+S7. Outlier Diagnostics Table (Cook Distance, Studentized Residuals, Weights)
+    File: outlier_diagnostics.csv
+
+S8. Leave-One-Out Analysis
+    File: leave_one_out.csv
+
+S9. Q-Q Plot of Standardized Residuals
+    File: qq_plot_residuals.png
+
+S10. TESTEX Assessment (placeholder — to be completed before submission)
+    Note: 29 studies to be re-scored using Smart et al. (2015) TESTEX scale.
+    PEDro scores already available; TESTEX will complement with sport-specific items.

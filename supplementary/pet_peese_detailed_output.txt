@@ -1,0 +1,16 @@
+=== PET-PEESE Supplementary Output ===
+
+## Strict Pool (k=15, REML g=+1.112, I2=78.1%)
+PET:  g ~ SE,  intercept = -2.9769, slope = +8.4527, SE(slope) = +1.1111, |t| = 7.607, R2 = 0.817
+PEESE: g ~ SE2, intercept = -0.5362, slope = +6.6454, SE(slope) = +0.8014, R2 = 0.841
+REML reference: g = +1.112 [0.599, 1.626]
+
+## Wide Pool (k=27, REML g=+0.986, I2=67.7%)
+PET:  g ~ SE,  intercept = -2.1718, slope = +7.0454, SE(slope) = +0.7968, R2 = 0.758
+PEESE: g ~ SE2, intercept = -0.3625, slope = +6.2692, SE(slope) = +0.5571, R2 = 0.835
+REML reference: g = +0.986 [0.696, 1.275]
+
+## Interpretation
+Stanley (2017) and Carter et al. (2019): inflated Type-I error + MSE when k<20 and I2>50%.
+Both PET and PEESE intercepts negative — inconsistent with REML positive pooled effect.
+This reflects method instability, NOT a true null/negative effect.

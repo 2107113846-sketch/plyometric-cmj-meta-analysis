@@ -1,0 +1,35 @@
+=== R19 (Michailidis 2018) CI Back-Calculation ===
+
+Study: Michailidis Y, Tabouris A, Metaxas T. Effects of plyometric and directional
+training on physical fitness parameters in youth soccer players.
+Int J Sports Physiol Perform. 2019;14(3):392-398.
+
+## Initial Data Extraction
+- Experimental group: n=31 (corrected from paper: intervention group n=31)
+- Control group: n=31
+- Reported SD values: ambiguous — paper reports values that could be interpreted
+  as either standard deviation (SD) or standard error (SE)
+
+## CI Back-Calculation
+The paper reports 95% CIs for CMJ height.
+Path A (assuming reported values are SE): SD = SE * sqrt(n)
+  → Larger SD estimate → smaller standardized effect (g ≈ +0.37)
+
+Path B (assuming reported values are SD): use directly
+  → Smaller SD estimate → larger standardized effect (g ≈ +1.48)
+
+## Effect Size Ambiguity
+- Delta g between the two interpretations: ~4.0x
+- Delta g = |1.48 - 0.37| ≈ 1.11, far exceeding the preset threshold of 0.5
+- Cannot determine which value is the true effect size
+
+## Decision
+Following pre-registered SOP:
+(i)  Contacted authors twice (2026-03-15, 2026-04-02) — no response
+(ii) CI back-calculation performed bidirectionally
+(iii) Delta g > 0.5 → marked as "high uncertainty"
+(iv) Excluded from primary analysis pool
+
+## Sensitivity
+Including R19 changes pooled g by Delta g = -0.016.
+Conclusion is robust to inclusion/exclusion of this study.

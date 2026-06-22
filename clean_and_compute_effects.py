@@ -232,7 +232,7 @@ KNOWN_CMJ_DATA = {
         "ctrl_post_mean": 21.99, "ctrl_post_sd": 1.88,
         "data_note": "⚠️ CMJ臂位未明示(SJ写限腿CMJ未提臂); 青春期前男足; OptoJump; Table2"
     },
-    "R23": {  # Rensing 2015 — 臂位未明+KG SD缺失⚠️
+    "R23": {  # Rensing 2016 — 臂位未明+KG SD缺失⚠️
         "exp_n": 12, "ctrl_n": 9,
         "exp_pre_mean": 37.6, "exp_pre_sd": 5.35,    # IG Pre SD用Post SD近似
         "exp_post_mean": 40.2, "exp_post_sd": 5.35,
