@@ -194,9 +194,11 @@ for section in doc.sections:
 # ================================================================
 add_para_headline(doc, 'Systematic Review and Meta-analysis of the Effects of Plyometric Training on Countermovement Jump Height: Effect Size Estimation and Dose-Response Relationship Based on Arm Position Stratification', bold=True, size=Pt(14), align=WD_ALIGN_PARAGRAPH.CENTER, indent=None)
 
-add_para(doc, 'MO Yuhang  FANG Yuanshun (Corresponding Author)', bold=False, size=Pt(11),
+add_para(doc, 'MO Yuhang*  FANG Yuanshun', bold=False, size=Pt(11),
          align=WD_ALIGN_PARAGRAPH.CENTER, first_line_indent=None, spacing_after=Pt(2))
 add_para(doc, 'School of Physical Education, Southwest University, Chongqing 400715, China',
+         size=Pt(9), align=WD_ALIGN_PARAGRAPH.CENTER, first_line_indent=None, spacing_after=Pt(2))
+add_para(doc, '*Corresponding author: 2107113846@qq.com',
          size=Pt(9), align=WD_ALIGN_PARAGRAPH.CENTER, first_line_indent=None, spacing_after=Pt(12))
 
 # ================================================================
