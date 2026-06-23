@@ -346,9 +346,9 @@ doc.add_page_break()
 
 add_para_headline(doc, 'Systematic Review and Meta-analysis of the Effects of Plyometric Training on Countermovement Jump Height: Effect Size Estimation and Dose-Response Relationship Based on Arm Position Stratification', bold=True, size=Pt(14), cjk=STYLE_FONT, align=WD_ALIGN_PARAGRAPH.CENTER, indent=None)
 
-add_para(doc, 'Author Name¹  FU Dao-ling² (Corresponding Author)', bold=False, size=Pt(11),
+add_para(doc, 'MO Yuhang¹  FANG Yuanshun¹  FU Daoling¹ (Corresponding Author)', bold=False, size=Pt(11),
          align=WD_ALIGN_PARAGRAPH.CENTER, first_line_indent=None, spacing_after=Pt(2))
-add_para(doc, '1. School of Physical Education, Southwest University, Chongqing 400715, China; 2. School of Physical Education, Southwest University, Chongqing 400715, China',
+add_para(doc, '1. School of Physical Education, Southwest University, Chongqing 400715, China',
          size=Pt(9), align=WD_ALIGN_PARAGRAPH.CENTER, first_line_indent=None, spacing_after=Pt(12))
 
 add_para_headline(doc, 'Abstract', bold=True, size=Pt(12), cjk=STYLE_FONT, indent=None)
