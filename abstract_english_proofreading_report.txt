@@ -1,0 +1,78 @@
+English Abstract Proofreading Report — generate_v5.py (lines 356–371)
+
+========================================
+SUMMARY
+========================================
+Errors found: 8
+Types: Dangling modifier (1), Semantic error (1), Awkward phrasing (1), Missing articles (2), Redundancy (1), Punctuation errors (1), Spelling (1)
+
+========================================
+CORRECTION LIST
+========================================
+
+1. [DANGLING MODIFIER — Objective, line 357]
+   Original: "...on countermovement jump (CMJ) height with CMJ arm position
+              as an inclusion criterion for the first time, and to..."
+   Corrected: "...for the first time, the effects of plyometric training on
+              countermovement jump (CMJ) height using CMJ arm position as
+              an inclusion criterion, and to..."
+   Rationale: "for the first time" was dangling — it could be misread as
+   modifying "countermovement jump" rather than "evaluate." Moved to immediately
+   after the verb. Also changed "with" to "using" for precision.
+
+2. [SEMANTIC ERROR — Objective, line 357]
+   Original: "to examine the dose-response relationship of moderating variables
+              such as intervention duration"
+   Corrected: "to examine the moderating effects of variables such as
+              intervention duration on the dose-response relationship"
+   Rationale: The original implies moderating variables themselves have a
+   dose-response relationship, which is semantically incorrect. The standard
+   phrasing in meta-analysis is "moderating effects of X on Y."
+
+3. [AWKWARD PHRASING / MISSING ARTICLE — Methods, line 358]
+   Original: "...CMJ with arm swing not separately reporting arm-restricted
+              CMJ, and injury rehabilitation populations were excluded."
+   Corrected: "...studies involving CMJ with arm swing that did not separately
+              report arm-restricted CMJ, and studies involving injury
+              rehabilitation populations were excluded."
+   Rationale: The original list items (designs, studies, CMJ, populations)
+   lacked parallel structure and was hard to parse. Restructured for clarity
+   and grammatical parallelism.
+
+4. [MISSING ARTICLE — Methods, line 359]
+   Original: "...(k={wide_k}) serving as sensitivity analysis."
+   Corrected: "...(k={wide_k}) serving as the sensitivity analysis."
+   Rationale: Missing definite article "the" before "sensitivity analysis."
+
+5. [REDUNDANCY — Results, line 363]
+   Original: "The strict hands-on-hips pool yielded a pooled Hedges' g=..."
+   Corrected: "The strict hands-on-hips pool yielded a Hedges' g of..."
+   Rationale: "pool yielded a pooled" is redundant. Restructured to remove
+   repetition.
+
+6. [MISSING ARTICLE — Results, line 367]
+   Original: "Egger test was significant (intercept=−2.64, p<0.001)"
+   Corrected: "The Egger test was significant (intercept=−2.64, p<0.001)"
+   Rationale: Missing definite article "the" before "Egger test."
+
+7. [PUNCTUATION — Range en-dash — Results, line 365]
+   Original: "medium-term (7-10 weeks)"
+   Corrected: "medium-term (7–10 weeks)"
+   Rationale: Numeric ranges should use en-dash (–, U+2013), not hyphen (-).
+
+8. [PUNCTUATION + SPELLING — Range tilde → en-dash — Results, line 367]
+   Original: "g=+1.37~1.51"  (chr(8764) = ∼, tilde operator U+223C)
+   Corrected: "g=+1.37–1.51"  (en-dash U+2013)
+   Rationale: The tilde ∼ is a mathematical approximation operator, not a
+   range separator. Academic style requires en-dash for numeric ranges.
+   Note: The Conclusion section (line 370) already uses the correct en-dash
+   for the same range.
+
+========================================
+ADDITIONAL NOTES
+========================================
+- "pre-registered" (line 362) changed to "preregistered" — the unhyphenated
+  form is standard in current academic publishing (APA 7th, ICMJE).
+- All template variables (e.g., {strict_k}, {fmt_g(...)}) preserved exactly.
+- GRADE capitalization ("Low") preserved as it is a proper noun/brand.
+- No content meaning was altered; all changes are stylistic/grammatical.

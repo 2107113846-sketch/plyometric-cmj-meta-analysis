@@ -1,0 +1,598 @@
+=== S10. TESTEX Assessment ===
+
+Scale: TESTEX (Tool for the assEssment of Study qualiTy and reporting in EXercise)
+Reference: Smart NA, et al. (2015). "Validation of a new tool for the assessment of study quality
+and reporting in exercise training studies: TESTEX." J Evid Based Med, 8(1), 25-31.
+Maximum score: 15 points (15 items, each 0-1).
+
+Items:
+  1. Eligibility criteria were specified
+  2. Subjects were randomly allocated to groups
+  3. Allocation was concealed
+  4. The groups were similar at baseline regarding the most important prognostic indicators
+  5. Subjects were blinded
+  6. Those who administered the exercise intervention were blinded
+  7. Those who assessed the outcomes were blinded
+  8. At least one outcome was measured with a reliable instrument
+  9. At least one outcome was measured with a valid instrument
+  10. Dropout rate was described
+  11. All subjects received the treatment or control condition as planned, or there was adequate statistical adjustment
+  12. Between-group statistical comparisons were reported for at least one key outcome
+  13. Point estimates and measures of variability were reported for at least one key outcome
+  14. Adherence to the exercise protocol was reported
+  15. Exercise intensity was monitored
+
+Note: Items 5 (subject blinding) and 6 (therapist blinding) are inherently unachievable
+in exercise training studies and systematically score 0, similar to PEDro items 5-6.
+The maximum achievable score is therefore effectively 13/15.
+
+--- Scoring Results ---
+
+R01 | Ramirez-Campillo (2015) (n=166) | Arm: 未明示(推断带臂) | PEDro: 5
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.5% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Dropout reported but adherence to protocol not explicitly quantified
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R02 | Ramirez-Campillo (2015) (n=54) | Arm: 带臂/CMJA(推断) | PEDro: 7
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.5% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R03 | Ramirez-Campillo (2015) (n=24) | Arm: 带臂/CMJA(推断) | PEDro: 8
+  TESTEX Total: 8/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✓]: Allocation concealment noted in PEDro scoring
+  Item  4 [✓]: Pre-test difference 1.5% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R04 | Palma-Munoz (2018) (n=22) | Arm: 未明示 | PEDro: 8
+  TESTEX Total: 8/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✓]: Allocation concealment explicitly described
+  Item  4 [✓]: Pre-test difference 2.1% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R05 | Ramirez-Campillo (2014) (n=32) | Arm: 带臂/CMJA(推断) | PEDro: 7
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 5.5% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R06 | Van Roie (2020) (n=32) | Arm: 未明示 | PEDro: 5
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.4% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R07 | Chang (2025) (n=23) | Arm: 手叉腰无臂 | PEDro: 5
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 3.6% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R08 | Asadi (2017) (n=16) | Arm: 带臂/CMJA(推断) | PEDro: 6
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 6.2% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R09 | Blazevich (2003) (n=23) | Arm: 手叉腰无臂 | PEDro: 3
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.6% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R10 | Byrne (2010) (n=19) | Arm: 手叉腰无臂 | PEDro: 7
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.9% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R11 | Sedano Campo (2009) (n=20) | Arm: 手叉腰无臂 | PEDro: 5
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.3% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R12 | Chelly (2010) (n=) | Arm: 带臂/CMJA(推断) | PEDro: 7
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.5% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R13 | Idrizovic (2018) (n=47) | Arm: 带臂(明确) | PEDro: 6
+  TESTEX Total: 8/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.2% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: Team-based attendance reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R14 | Jlid (2019) (n=28) | Arm: 手叉腰无臂 | PEDro: 5
+  TESTEX Total: 7/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 0.7% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R15 | Jlid (2020) (n=27) | Arm: 手叉腰无臂 | PEDro: 8
+  TESTEX Total: 11/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.0% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✓]: Assessor blinding reported (from detailed data extraction)
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 1人(CG伤退)
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: Training attendance tracked, progressive loading documented
+  Item 15 [✓]: Progressive loading W1:140→W6:216 contacts, max effort
+
+R16 | Khlifa (2010) (n=27) | Arm: 手叉腰无臂 | PEDro: 7
+  TESTEX Total: 12/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.4% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✓]: Assessor blinding described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 0%(27人均完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: All 27 participants completed the 10-week program (0% dropout)
+  Item 15 [✓]: Progressive loading documented, max effort (shortest GCT)
+
+R17 | Kijowski/McBride (2015) (n=19) | Arm: 未明示(推断可能带臂或自然下垂) | PEDro: 4
+  TESTEX Total: 10/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.1% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 0%(19人均完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Dropout reported but adherence to protocol not explicitly quantified
+  Item 15 [✓]: 60 contacts × 4 weeks, max effort (monitored jump height)
+
+R18 | Laurent () (n=32) | Arm: 手叉腰无臂 | PEDro: 5
+  TESTEX Total: 10/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✗]: Pre-test difference 15.5% (>=10%), groups potentially dissimilar
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 0%(32人均完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: 0% dropout, full protocol compliance
+  Item 15 [✓]: Progressive W1:120→W10:220 contacts/session, max effort
+
+R19 | Michailidis (2018) (n=31) | Arm: 手叉腰无臂 | PEDro: 5
+  TESTEX Total: 10/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.4% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 约18%
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: Dropout ~18%, adherence partially described
+  Item 15 [✓]: Progressive W1→W6 loading, max effort
+
+R20 | Negra (2016) (n=34) | Arm: 未明示(推断臂位不明，同类R12/R17) | PEDro: 5
+  TESTEX Total: 10/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 7.9% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 0%(34人均完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Dropout reported but adherence to protocol not explicitly quantified
+  Item 15 [✓]: Progressive W1:112→W12:240 contacts, max effort
+
+R21 | Potdevin (2011) (n=23) | Arm: 手叉腰无臂 | PEDro: 6
+  TESTEX Total: 11/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 6.6% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 0%(23人均完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: All 23 participants completed the program (0% dropout)
+  Item 15 [✓]: Progressive volume, ~120 contacts/session, max effort
+
+R22 | Ramirez-Campillo (2018) (n=38) | Arm: 手叉腰无臂 | PEDro: 8
+  TESTEX Total: 13/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✓]: Allocation concealment explicitly described
+  Item  4 [✓]: Pre-test difference 5.7% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✓]: Assessor blinding reported (from detailed data extraction)
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 22%(因伤/缺席/未完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: 22% attrition reported, remaining participants completed protocol
+  Item 15 [✓]: Progressive W1:~104→~840 contacts/7wk, max effort
+
+R23 | Rensing (2015) (n=21) | Arm: 未明示(推断可能带臂或自然，同类R12/R17/R20) | PEDro: 6
+  TESTEX Total: 10/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.1% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✓]: Assessor blinding described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 16%
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Dropout reported but adherence to protocol not explicitly quantified
+  Item 15 [✓]: DJ 3×5 sets + others ~75/session, max effort (shortest GCT)
+
+R24 | Rubley (2011) (n=20) | Arm: VJ带臂(1-step approach with arm swing) - 非CMJ手叉腰 | PEDro: 6
+  TESTEX Total: 8/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 0.5% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: CG 2人因缺测Session退出分析
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✗]: Exercise intensity not explicitly monitored or reported
+
+R26 | Santos (2011) (n=24) | Arm: 手叉腰无臂 | PEDro: 5
+  TESTEX Total: 10/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.6% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 0%(24人均完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✓]: Progressive W1~120→W10~240 contacts, max effort
+
+R27 | Toumi (2004) (n=30) | Arm: 手叉腰无臂 | PEDro: 5
+  TESTEX Total: 11/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 9.1% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 0%(30人均完成)
+  Item 11 [✓]: 0% dropout, all subjects received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: All 30 participants completed the program (0% dropout)
+  Item 15 [✓]: 70% MVC leg press intensity, 6×10 reps
+
+R29 | Vescovi (2008) (n=20) | Arm: 手叉腰无臂 | PEDro: 6
+  TESTEX Total: 9/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 3.7% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 2人VGRF outlier移除(CMJ数据保留n=10/8)
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Dropout reported but adherence to protocol not explicitly quantified
+  Item 15 [✓]: Progressive W1~150→W6~300 contacts, max height
+
+R30 | Yanci (2017) (n=39) | Arm: 手叉腰无臂 | PEDro: 6
+  TESTEX Total: 10/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 2.2% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✓]: Dropout rate described: 11%
+  Item 11 [✗]: Per-protocol analysis with dropout, not all received allocated condition
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✓]: 11% dropout, attendance tracked
+  Item 15 [✓]: Max effort, progressive volume
+
+R31 | Zubac (2017) (n=20) | Arm: 臂位未明示(颈后杆固定但未提hands on hips) | PEDro: 6
+  TESTEX Total: 8/15
+  Item  1 [✓]: Eligibility criteria stated in Methods section
+  Item  2 [✓]: RCT design, random allocation described
+  Item  3 [✗]: Allocation concealment not described
+  Item  4 [✓]: Pre-test difference 1.0% (<10%), groups similar at baseline
+  Item  5 [✗]: Exercise intervention: subjects cannot be blinded
+  Item  6 [✗]: Exercise intervention: trainer/instructor cannot be blinded
+  Item  7 [✗]: Assessor blinding not described
+  Item  8 [✓]: CMJ measured with standardized protocol
+  Item  9 [✓]: CMJ is a validated measure of lower-body power
+  Item 10 [✗]: Dropout rate not explicitly described
+  Item 11 [✗]: Analysis type not clearly meeting criterion
+  Item 12 [✓]: Between-group CMJ comparisons reported
+  Item 13 [✓]: Mean ± SD reported for key outcomes
+  Item 14 [✗]: Adherence to exercise protocol not explicitly reported
+  Item 15 [✓]: ~1300 contacts total, max effort
+
+--- Summary Statistics ---
+
+Total studies: 29
+TESTEX score range: 7-13 / 15
+Mean ± SD: 8.8 ± 1.8
+Median: 8
+Mean achievable (excl. Items 5,6): 8.8 / 13
+
+Per-item pass rates:
+  Item  1: 29/29 (100%)
+  Item  2: 29/29 (100%)
+  Item  3:  3/29 (10%)
+  Item  4: 28/29 (97%)
+  Item  5:  0/29 (0%)
+  Item  6:  0/29 (0%)
+  Item  7:  4/29 (14%)
+  Item  8: 29/29 (100%)
+  Item  9: 29/29 (100%)
+  Item 10: 14/29 (48%)
+  Item 11:  8/29 (28%)
+  Item 12: 29/29 (100%)
+  Item 13: 29/29 (100%)
+  Item 14:  9/29 (31%)
+  Item 15: 14/29 (48%)
+
+--- Comparison with PEDro ---
+
+Both scales share Items 1-4 (eligibility, random allocation, allocation concealment,
+baseline similarity) and Items 7-11 (assessor blinding, reliable/valid measurement,
+dropout, ITT, between-group comparisons, point estimates + variability).
+TESTEX adds 5 exercise-specific items (11-15): adherence, exercise intensity monitoring,
+control group activity, outcome reporting, and adverse events.
+
+Highest TESTEX scores:
+  R22 Ramirez-Campillo (2018): 13/15
+  R16 Khlifa (2010): 12/15
+  R15 Jlid (2020): 11/15
+  R21 Potdevin (2011): 11/15
+  R27 Toumi (2004): 11/15
+
+Lowest TESTEX scores:
+  R09 Blazevich (2003): 7/15
+  R10 Byrne (2010): 7/15
+  R11 Sedano Campo (2009): 7/15
+  R12 Chelly (2010): 7/15
+  R14 Jlid (2019): 7/15

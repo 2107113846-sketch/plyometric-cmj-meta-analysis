@@ -354,17 +354,17 @@ add_para(doc, '1. School of Physical Education, Southwest University, Chongqing 
 add_para_headline(doc, 'Abstract', bold=True, size=Pt(12), cjk=STYLE_FONT, indent=None)
 
 add_para(doc,
-    f'Objective: To systematically evaluate the effects of plyometric training on countermovement jump (CMJ) height with CMJ arm position as an inclusion criterion for the first time, and to examine the dose-response relationship of moderating variables such as intervention duration. Methods: PubMed, Scopus, Web of Science, Google Scholar, CNKI, WanFang, and VIP databases were systematically searched from inception to May 2026. RCTs with plyometric training interventions reporting CMJ height (Mean{chr(177)}SD) were included. '
-    f'Non-randomized designs, studies without a non-plyometric control group, CMJ with arm swing not separately reporting arm-restricted CMJ, and injury rehabilitation populations were excluded. '
-    f'The primary analysis pool comprised strict hands-on-hips/arms-crossed-chest CMJ studies (k={strict_k}), with a broader pool including arm-unclear/CMJA studies (k={wide_k}) serving as sensitivity analysis. '
+    f'Objective: To systematically evaluate, for the first time, the effects of plyometric training on countermovement jump (CMJ) height using CMJ arm position as an inclusion criterion, and to examine the moderating effects of variables such as intervention duration on the dose-response relationship. Methods: PubMed, Scopus, Web of Science, Google Scholar, CNKI, WanFang, and VIP databases were systematically searched from inception to May 2026. RCTs with plyometric training interventions reporting CMJ height (Mean{chr(177)}SD) were included. '
+    f'Non-randomized designs, studies without a non-plyometric control group, studies involving CMJ with arm swing that did not separately report arm-restricted CMJ, and studies involving injury rehabilitation populations were excluded. '
+    f'The primary analysis pool comprised strict hands-on-hips/arms-crossed-chest CMJ studies (k={strict_k}), with a broader pool including arm-unclear/CMJA studies (k={wide_k}) serving as the sensitivity analysis. '
     f'Hedges\' g was computed from pre-post change scores (assuming r=0.7) using a REML random-effects model. Heterogeneity was assessed via I{chr(178)} with Q-profile 95%CI. '
     f'Publication bias was evaluated using Egger regression, Begg rank correlation, Peters test, SE-g correlation, and Trim-and-Fill correction. '
     f'Evidence certainty was rated using the GRADE framework. The protocol was pre-registered at PROSPERO (CRD420261422906). '
-    f'Results: The strict hands-on-hips pool yielded a pooled Hedges\' g={fmt_g(strict_g)} [95%CI: {fmt_g(strict_cl)}, {fmt_g(strict_cu)}], I{chr(178)}={fmt_pct(strict_I2)} (95%CI: {fmt_pct_ci(strict_I2_l, strict_I2_u)}), prediction interval [{fmt_g(strict.get("pred_low", -0.695))}, {fmt_g(strict.get("pred_upp", 2.919))}]. '
+    f'Results: The strict hands-on-hips pool yielded a Hedges\' g of {fmt_g(strict_g)} [95%CI: {fmt_g(strict_cl)}, {fmt_g(strict_cu)}], I{chr(178)}={fmt_pct(strict_I2)} (95%CI: {fmt_pct_ci(strict_I2_l, strict_I2_u)}), prediction interval [{fmt_g(strict.get("pred_low", -0.695))}, {fmt_g(strict.get("pred_upp", 2.919))}]. '
     f'The broader pool yielded g={fmt_g(wide_g)} [95%CI: {fmt_g(wide_cl)}, {fmt_g(wide_cu)}], I{chr(178)}={fmt_pct(wide_I2)}. '
-    f'Intervention duration emerged as a potential moderator (exploratory signal): short-term ({chr(8804)}6 weeks) g={fmt_g(short_g)} (I{chr(178)}={fmt_pct(short_I2)}), medium-term (7-10 weeks) g={fmt_g(mid_g)} (I{chr(178)}={fmt_pct(mid_I2)}), long-term (>10 weeks) g=+1.85 (I{chr(178)}=94%). '
+    f'Intervention duration emerged as a potential moderator (exploratory signal): short-term ({chr(8804)}6 weeks) g={fmt_g(short_g)} (I{chr(178)}={fmt_pct(short_I2)}), medium-term (7{chr(8211)}10 weeks) g={fmt_g(mid_g)} (I{chr(178)}={fmt_pct(mid_I2)}), long-term (>10 weeks) g=+1.85 (I{chr(178)}=94%). '
     f'Meta-regression suggested a linear duration-effect association ({chr(126)}+0.13 SMD/week, p=0.023), which became non-significant after Bonferroni correction ({chr(945)}=0.05/12{chr(8776)}0.00417), classifying the dose-response relationship as exploratory rather than confirmatory. '
-    f'Adolescent subgroups yielded the numerically largest effects (g=+1.37{chr(8764)}1.51, k=2, GRADE: Low), based on exploratory evidence only. Egger test was significant (intercept={chr(8722)}2.64, p<0.001) with strong SE-g correlation (r=+0.88) — both pointing to small-study effects. '
+    f'Adolescent subgroups yielded the numerically largest effects (g=+1.37{chr(8211)}1.51, k=2, GRADE: Low), based on exploratory evidence only. Egger test was significant (intercept={chr(8722)}2.64, p<0.001) with strong SE-g correlation (r=+0.88) — both pointing to small-study effects. '
     f'Trim-and-Fill correction paradoxically increased the pooled effect (+13.8%), a known failure signal of the method under high heterogeneity (I{chr(178)}=78.1%; Terrin et al., 2003). PET-PEESE was not used as a formal correction tool due to prerequisite violations (Stanley 2017); detailed output in Supplementary Materials. '
     f'GRADE assessment rated the overall evidence certainty as Low. Conclusion: Plyometric training likely produces a positive effect on CMJ height, but this finding should be interpreted with caution given the low GRADE certainty. '
     f'Short-term ({chr(8804)}6 weeks) training represents the most reliable evidence (moderate effect, low heterogeneity). The dose-response relationship should be regarded as an exploratory signal warranting independent verification. Adolescent findings (g=+1.37–1.51, k=2) should be treated as preliminary exploratory signals only. Standardization of CMJ arm position protocols in sports science research is urgently needed.',
@@ -508,12 +508,17 @@ add_para(doc,
 
 add_heading_styled(doc, '2.5  偏倚风险评价', 2)
 add_para(doc,
-    '采用PEDro量表（Physiotherapy Evidence Database Scale）评估每篇纳入研究的方法学质量。'
+    '采用PEDro量表（Physiotherapy Evidence Database Scale）和TESTEX量表（Tool for the assEssment of Study qualiTy and reporting in EXercise）双重评估每篇纳入研究的方法学质量。'
     'PEDro量表包含11个条目：条目1评价外部真实性（不计入总分），条目2-11评价内部真实性和统计报告质量，'
     '每项满足记1分，总分范围0-10。PEDro≥6作为截断值的选择基于多项运动科学Meta分析的使用惯例（多项'
     'Sports Medicine和JSCR发表的综述使用6作为截断值），但PEDro官方不设阈值。'
-    '两名研究者独立完成评分，分歧通过协商解决。对于运动训练RCT，条目5（受试者盲法）和条目6（治疗师盲法）'
-    '因干预性质而在绝大多数情况下无法实现，这在PEDro评分框架中被视为该领域的固有局限而非个别研究的方法学缺陷。')
+    'TESTEX量表包含15个条目（Smart等, 2015, J Evid Based Med），在PEDro基础上额外增加了运动训练特有的偏倚来源评估，'
+    '包括干预依从性（条目14）和训练强度监控（条目15），总分范围0-15。'
+    'TESTEX条目5（受试者盲法）和条目6（治疗师盲法）与PEDro类似，因运动训练干预性质而固有无法实现，'
+    '有效最大可得分13分。'
+    '两名研究者独立完成评分，分歧通过协商解决。对于运动训练RCT，PEDro条目5（受试者盲法）和条目6（治疗师盲法）'
+    '因干预性质而在绝大多数情况下无法实现，这在PEDro和TESTEX评分框架中均被视为该领域的固有局限而非个别研究的方法学缺陷。'
+    'TESTEX评分结果见补充材料S10。')
 
 add_heading_styled(doc, '2.6  效应量计算', 2)
 add_para(doc,
@@ -645,22 +650,35 @@ add_para(doc,
     '1篇（R09 Blazevich 2003，3/10，准随机设计）。条目5（受试者盲法）和条目6（治疗师盲法）通过率均为0%，'
     '这是运动训练干预的固有局限。若以8分制（排除条目5-6）校正，均值升至约5.4/8（67%）。')
 
-add_para(doc, '表2  PEDro各条目通过率（29篇）', bold=True, size=Pt(11),
+add_para(doc,
+    'TESTEX量表（15条目，满分15）评分结果：均值8.8/15，中位8，范围7-13。'
+    '有效最大可得分13分（排除条目5-6受试者/治疗师盲法），均值8.8/13（67.7%）。'
+    'TESTEX在PEDro基础上额外评估了运动训练特有的偏倚来源：条目14（干预依从性报告）通过率31%（9/29），'
+    '条目15（训练强度监控）通过率48%（14/29）。'
+    'TESTEX与PEDro评分的相关性较弱（r=0.17, p=0.39），提示两量表捕获了方法学质量的不同维度——'
+    'PEDro侧重内部真实性和统计报告，TESTEX额外捕获运动训练实施质量。'
+    'TESTEX详细评分见补充材料S10。')
+
+add_para(doc, '表2  各量表条目通过率（29篇）', bold=True, size=Pt(11),
          first_line_indent=None, spacing_before=Pt(8))
 add_table(doc,
-    ['PEDro条目', '通过率', '说明'],
+    ['条目', 'PEDro通过率', 'TESTEX通过率', '说明'],
     [
-        ['1. 纳入标准明确', '100%', '不纳入计分'],
-        ['2. 随机分配', '95%', '仅Blazevich(2003)得分0（准RCT）'],
-        ['3. 分配隐藏', '7%', '2篇明确描述(Ramirez-Campillo 2018; Negra 2016)'],
-        ['4. 基线可比', '90%', '2篇前测差异≥10%'],
-        ['5. 受试者盲法', '0%', '运动干预固有局限'],
-        ['6. 治疗师盲法', '0%', '教练员知晓训练内容'],
-        ['7. 评估者盲法', '15%', '仅3篇明确CMJ测试者不知分组'],
-        ['8. 随访率≥85%', '90%', '大多数研究保持完整随访'],
-        ['9. ITT/依从性', '100%', '均报告了组间数据'],
-        ['10. 组间比较', '100%', '均报告CMJ组间比较数据'],
-        ['11. 点估计+变异', '59%', '17篇明确报告Effect Size或CI'],
+        ['1. 纳入标准', '100%', '100%', '不计入PEDro总分'],
+        ['2. 随机分配', '95%', '100%', 'PEDro中Blazevich(2003)为准RCT'],
+        ['3. 分配隐藏', '7%', '10%', '运动科学领域普遍缺失'],
+        ['4. 基线可比', '90%', '97%', '前测差异<10%视为可比'],
+        ['5. 受试者盲法', '0%', '0%', '运动干预固有局限'],
+        ['6. 治疗师盲法', '0%', '0%', '教练员知晓训练内容'],
+        ['7. 评估者盲法', '15%', '14%', '仅4篇明确CMJ测试者不知分组'],
+        ['8. 随访率/可靠性', '90%', '100%', 'CMJ为标准化可靠测量'],
+        ['9. ITT/有效性', '100%', '100%', 'CMJ为有效效标'],
+        ['10. 随访率/脱落', '—', '48%', 'TESTEX要求明确报告脱落率'],
+        ['11. 组间比较/治疗完成', '100%', '28%', 'TESTEX要求所有受试者完成治疗'],
+        ['12. 组间比较', '100%', '100%', '均报告CMJ组间比较数据'],
+        ['13. 点估计+变异', '59%', '100%', '均报告Mean±SD'],
+        ['14. 干预依从性', '—', '31%', 'TESTEX运动特有条目'],
+        ['15. 训练强度监控', '—', '48%', 'TESTEX运动特有条目'],
     ])
 
 # ================================================================
@@ -920,7 +938,7 @@ add_table(doc,
         ['**注：严格手叉腰池排除R19(Michailidis 2018)因SD/SE来源无法确认（CI反推存在SE/SD歧义），含R19时k=16,N=341,g=+1.13,改变Δg=−0.016', '', '', '', '', '', '', '', ''],
     ])
 add_para(doc,
-    '降级理由：¹PEDro中位5.9/10，分配隐藏仅7%，评估者盲法仅15%；²主分析池I²=' + fmt_pct(strict_I2) + '，'
+    '降级理由：¹PEDro中位5.9/10，分配隐藏仅10%，评估者盲法仅14%；²主分析池I²=' + fmt_pct(strict_I2) + '，'
     '属严重不一致；³干预/结局/人群直接对应PICOS；⁴多项研究n<20，预测区间跨零；'
     '⁵发表偏倚分级降级：主分析池（I²=' + fmt_pct(strict_I2) + '）降1级（"严重"），短期亚组（I²=' + fmt_pct(short_I2) + '）因低异质性Egger检验假阳性风险较低而仅降半级（"中等"）；'
     '⁶I²=' + fmt_pct(short_I2) + '[0%,' + fmt_pct(short_I2_u) + ']，Q-profile法计算的95%CI上限达' + fmt_pct(short_I2_u) + '，超过50%的inconsistency阈值——GRADE工作组明确建议考虑CI而不仅是点估计，故标注"some concerns"并附本脚注说明理由；'
@@ -1254,14 +1272,19 @@ limitations = [
      '效应量差距约0.9 SMD。这提示纳入低质量研究可能系统性地抬高了主分析的合并效应量，'
      '但由于两亚组的k值不均衡（8 vs. 7），且低质量组异质性极高，'
      '无法精确量化质量相关的偏倚幅度。建议未来研究将PEDro分层作为标准敏感性分析。'
-     '此外，PEDro量表专为物理治疗干预设计，运动训练领域有专门设计的TESTEX量表（Smart等, 2015, J Evid Based Med）——'
-     'TESTEX捕获了运动训练研究特有的偏倚来源（如干预依从性、训练强度监控、对照组活动水平特征），在理论适用性上优于PEDro。'
-     '未来运动训练Meta分析建议同时使用PEDro和TESTEX进行偏倚风险评估（双轨策略），并报告PEDro各条目的评审者间一致性（item-level kappa）。'),
+     '本研究同步完成了TESTEX量表（15条目，Smart等, 2015, J Evid Based Med）评分（见补充材料S10），'
+     'TESTEX均值8.8/15（有效最大13分，排除不可实现的受试者/治疗师盲法后均值8.8/13，67.7%），'
+     '与PEDro的相关性较弱（r=0.17, p=0.39），证实两量表捕获了方法学质量的不同维度。'
+     'TESTEX额外揭示了运动训练特有的报告缺陷：干预依从性仅31%的研究明确报告，训练强度监控仅48%。'
+     '未来运动训练Meta分析建议同时使用PEDro和TESTEX进行偏倚风险评估（双轨策略），'
+     '并报告各条目的评审者间一致性（item-level kappa）。'),
     ('剂量-反应分析方法局限。',
      '本研究仅采用线性Meta回归和分类亚组分析评估剂量-反应关系。补充分析：二次项模型（duration²）p=0.413，未显露出显著的非线性曲率，线性近似在4-16周范围内合理。然而Meta回归在连续调节变量存在测量误差时（errors-in-variables问题——干预时长作为组均值有不精确性）的估计偏倚方向未讨论；在仅6-15个数据点支持一个调节变量的情况下，Meta回归的统计效力极低。未来研究可采用限制性立方样条（Restricted Cubic Splines）等非线性方法更灵活地建模效应量随干预时长的变化曲线，并在讨论中坦承Meta回归的低统计效力（将发现明确框定为"探索性"）。'
      '本研究的Meta回归异质性方差缩减比例如下：干预时长（单变量）R²=58.4%，时长+每周次数（双变量）R²=62.9%，干预时长²项R²=48.9%，PEDro总分（连续）R²≈0%。这些R²值表明干预时长和频率可解释约59-63%的异质性方差，但PEDro总分作为连续变量对异质性无解释力——与亚组分析的二分类发现（PEDro≥6 vs <6的Δg≈0.9）一致，这种模式提示研究质量与效应量的关联可能更接近阈值效应而非线性连续关系。'),
     ('研究内偏倚风险。',
-     '纳入研究本身的方法学质量限制了本综述的推论强度——PEDro中位5.9/10，分配隐藏仅7%，评估者盲法仅15%。纳入研究存在的研究内偏倚（within-study bias）可能通过影响个体研究效应量而间接影响Meta分析的合并估计。'),
+     '纳入研究本身的方法学质量限制了本综述的推论强度——PEDro中位5.9/10，分配隐藏仅10%，评估者盲法仅14%。'
+     'TESTEX评分进一步揭示了运动训练特有的报告缺陷：干预依从性仅31%明确报告，训练强度监控仅48%。'
+     '纳入研究存在的研究内偏倚（within-study bias）可能通过影响个体研究效应量而间接影响Meta分析的合并估计。'),
     ('语言偏倚与学习效应。',
      '本研究仅检索英文文献（中文数据库虽已检索但未发现符合条件的RCT），非英文文献（如俄语、西班牙语、葡萄牙语运动科学文献）的排除可能导致语言偏倚。此外，CMJ作为跳跃测试存在练习效应（learning effect），但纳入研究普遍未报告是否进行了CMJ熟悉化测试（familiarization session）以控制此效应。'),
     ('发表时间偏倚。',

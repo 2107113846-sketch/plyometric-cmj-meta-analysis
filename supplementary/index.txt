@@ -27,6 +27,7 @@ S8. Leave-One-Out Analysis
 S9. Q-Q Plot of Standardized Residuals
     File: qq_plot_residuals.png
 
-S10. TESTEX Assessment (placeholder — to be completed before submission)
-    Note: 29 studies to be re-scored using Smart et al. (2015) TESTEX scale.
-    PEDro scores already available; TESTEX will complement with sport-specific items.
+S10. TESTEX Assessment (29 studies scored using Smart et al. 2015 TESTEX scale)
+    Files: S10_TESTEX_Scores.csv, S10_TESTEX_Scores.txt, S10_TESTEX_Scores.json
+    Scale: 15 items (0-15 total), includes exercise-specific items (adherence, intensity monitoring).
+    Summary: Mean ± SD = 8.8 ± 1.8, range 7-13/15. Median 8.
